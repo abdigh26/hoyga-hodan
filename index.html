@@ -24,7 +24,7 @@
   --maroon:#4A1119; --deep:#2A0B0E;
   --orange:#CE5B1F; --amber:#E59A3A; --sand:#EBD9BF;
   --line:rgba(36,9,13,.18); --line-l:rgba(247,238,223,.22);
-  --cloth:url("https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1cfa98840-159f-4d11-b6f1-3c265cd06224.png");
+  --cloth:url("assets/images/IMG-20260802-WA0006.jpg");
   --disp:"Fraunces",Georgia,serif; --body:"Outfit",system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -246,7 +246,7 @@ blockquote cite{display:block;margin-top:16px;padding-left:56px;font-style:norma
 /* films */
 .film-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:clamp(40px,5vw,70px)}
 .film{position:relative;border:1.5px solid var(--ink);aspect-ratio:16/10;overflow:hidden;background:var(--ink)}
-.film .layer{position:absolute;inset:0;background-size:cover;background-position:center}
+.film .layer, .film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .film .fa{animation:filmA 14s ease-in-out infinite}
 .film .fb{animation:filmB 14s ease-in-out infinite}
 @keyframes filmA{0%,40%{opacity:1;transform:scale(1.04)}50%,90%{opacity:0;transform:scale(1.14)}100%{opacity:1;transform:scale(1.04)}}
@@ -492,15 +492,15 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
     </div>
     <div class="hero-collage">
       <figure class="pc pc1">
-        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/18e6a47b9-14a4-411a-8884-924d52bf31b7.png" alt="Women cutting a celebration cake at the Hoyga Hodan Baraawe launch"></div>
+        <div class="ph kb"><img src="assets/images/IMG-20260802-WA0111.jpg" alt="Women cutting a celebration cake at the Hoyga Hodan Baraawe launch"></div>
         <figcaption><span>Baraawe Launch</span><span>Chapter 02</span></figcaption>
       </figure>
       <figure class="pc pc2">
-        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f3368569-f0ea-4b60-ad51-2ce27723e880.png" alt="Large gathering of women in colorful traditional dress at a Hoyga Hodan event"></div>
+        <div class="ph kb"><img src="assets/images/IMG-20260802-WA0114.jpg" alt="Large gathering of women in colorful traditional dress at a Hoyga Hodan event"></div>
         <figcaption><span>The Gathering</span><span>Edition 04</span></figcaption>
       </figure>
       <figure class="pc pc3">
-        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/167c13545-d167-4cf9-a0a0-eef8620d61c1.png" alt="Young women in maroon striped garb sitting in a circle at an event"></div>
+        <div class="ph kb"><img src="assets/images/IMG-20260802-WA0010.jpg" alt="Young women in maroon striped garb sitting in a circle at an event"></div>
         <figcaption><span>The Circle</span><span>Networking</span></figcaption>
       </figure>
       <div class="ticket">★ $5 Ticket<small>Community Owned</small></div>
@@ -552,7 +552,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       <h2 class="lm"><span>From one $5 ticket to a <em>movement.</em></span></h2>
       <p class="lead rv" style="margin-top:20px">Hoyga Hodan began as a simple idea: <em>what if Somali youth women had a space that was theirs — affordable, creative, and built for their realities?</em></p>
       <figure class="story-img rv" style="--d:.15s">
-        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/139aadf5a-fd07-4a26-8a77-563f026122c4.png" alt="Vendor’s hands with gold bangles holding a woven basket of tomatoes"></div>
+        <div class="ph kb"><img src="assets/images/IMG-20260802-WA0058.jpg" alt="Vendor’s hands with gold bangles holding a woven basket of tomatoes"></div>
         <figcaption>Vendor Showcase · Market Expo</figcaption>
       </figure>
     </div>
@@ -584,7 +584,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
             <span>Financial Literacy</span><span>Leadership &amp; Public Speaking</span><span>Creative Crafts</span>
           </div>
         </div>
-        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1c02016c0-dd91-48b0-96f9-36f4a432a770.png" alt="Business training workshop with mentor at a whiteboard"></div><figcaption>From idea to business model</figcaption></figure>
+        <figure class="p-img"><div class="ph"><img src="assets/images/IMG-20260802-WA0066.jpg" alt="Business training workshop with mentor at a whiteboard"></div><figcaption>From idea to business model</figcaption></figure>
       </article>
       <article class="p-card">
         <div>
@@ -602,7 +602,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
             <li>Media interviews and photography coverage</li>
           </ul>
         </div>
-        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/12467fc07-f79c-47f7-99cb-d5ad2fd732b4.png" alt="Dhaqan Goob cultural corner under a striped canopy"></div><figcaption>Dhaqan Goob · cultural corner</figcaption></figure>
+        <figure class="p-img"><div class="ph"><img src="assets/images/IMG-20260802-WA0008.jpg" alt="Dhaqan Goob cultural corner under a striped canopy"></div><figcaption>Dhaqan Goob · cultural corner</figcaption></figure>
       </article>
       <article class="p-card">
         <div>
@@ -611,7 +611,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
           <p>Training without follow-up is wasted. We match participants with local business leaders for ongoing mentorship, and we organize <b>quarterly market expos</b> that connect entrepreneurs directly with buyers, investors, and government procurement officers.</p>
           <div class="tags"><span>Mentor Matching</span><span>Quarterly Market Expos</span><span>Buyers &amp; Investors</span><span>Procurement Access</span></div>
         </div>
-        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/16c7aed1f-357d-40b6-89f2-57fae7103564.png" alt="Woven baskets of grains, fruits and produce at a market expo"></div><figcaption>Direct to market</figcaption></figure>
+        <figure class="p-img"><div class="ph"><img src="assets/images/IMG-20260802-WA0106.jpg" alt="Woven baskets of grains, fruits and produce at a market expo"></div><figcaption>Direct to market</figcaption></figure>
       </article>
       <article class="p-card">
         <div>
@@ -620,7 +620,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
           <p>We are building an online learning portal to reach youth women in rural areas and the diaspora — extending the Hub far beyond Mogadishu.</p>
           <div class="tags"><span>Somali-Language Training Videos</span><span>Mentor Matching System</span><span>Business Directory</span><span>Digital Certificates</span></div>
         </div>
-        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1eb95a64b-6dcf-44f6-9742-bb5ed80b6371.png" alt="Mogadishu coastline at golden hour"></div><figcaption>Reaching rural &amp; diaspora</figcaption></figure>
+        <figure class="p-img"><div class="ph"><img src="assets/images/IMG-20260802-WA0006.jpg" alt="Mogadishu coastline at golden hour"></div><figcaption>Reaching rural &amp; diaspora</figcaption></figure>
       </article>
     </div>
   </div>
@@ -667,20 +667,19 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       <p class="lead rv" style="margin-top:16px">Every edition leaves behind color, henna, woven baskets and new businesses. Click any frame to view it large.</p>
     </div>
     <div class="g-masonry">
-      <figure class="g-item rv" data-cap="Market Expo · Local produce & grains"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/16c7aed1f-357d-40b6-89f2-57fae7103564.png" alt="Woven baskets of grains, limes, coconuts, mangoes and tomatoes on mats" loading="lazy"></div><figcaption><span>Market Expo</span><span class="gt">Produce &amp; Grains</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="Baraawe Chapter · Launch ceremony"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/18e6a47b9-14a4-411a-8884-924d52bf31b7.png" alt="Women cutting a cake beneath the Hoyga Hodan Baraawe banner" loading="lazy"></div><figcaption><span>Baraawe Launch</span><span class="gt">Chapter 02</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="Vendor Showcase · Harvest stall"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/139aadf5a-fd07-4a26-8a77-563f026122c4.png" alt="Hands with gold bangles holding a basket of tomatoes" loading="lazy"></div><figcaption><span>Vendor Showcase</span><span class="gt">Harvest Stall</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="Dhaqan Goob · Cultural corner"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/12467fc07-f79c-47f7-99cb-d5ad2fd732b4.png" alt="Group under striped canopy at the Dhaqan Goob cultural corner" loading="lazy"></div><figcaption><span>Dhaqan Goob</span><span class="gt">Cultural Corner</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="The Circle · Networking & games"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/167c13545-d167-4cf9-a0a0-eef8620d61c1.png" alt="Women in maroon striped garb seated in a circle" loading="lazy"></div><figcaption><span>The Circle</span><span class="gt">Networking</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="Sponsor Wall · Gifting moments"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/12d244ee6-80f2-4d35-b328-ef830c31e5dc.png" alt="Two smiling women holding a golden gift bag at the sponsor backdrop" loading="lazy"></div><figcaption><span>Sponsor Wall</span><span class="gt">Gifting</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="The Gathering · Edition 04"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f3368569-f0ea-4b60-ad51-2ce27723e880.png" alt="Large indoor gathering of women in colorful traditional dress" loading="lazy"></div><figcaption><span>The Gathering</span><span class="gt">Edition 04</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="Dhaqan Goob · Maker-to-maker exchange"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1a6e4dc08-1dc6-429a-bbd7-5233ffb38de9.png" alt="Two women exchanging a hand-painted tote bag before the Somali flag" loading="lazy"></div><figcaption><span>Maker Exchange</span><span class="gt">Dhaqan Goob</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Market Expo · Local produce & grains"><div class="ph"><img src="assets/images/IMG-20260802-WA0106.jpg" alt="Woven baskets of grains, limes, coconuts, mangoes and tomatoes on mats" loading="lazy"></div><figcaption><span>Market Expo</span><span class="gt">Produce &amp; Grains</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Baraawe Chapter · Launch ceremony"><div class="ph"><img src="assets/images/IMG-20260802-WA0111.jpg" alt="Women cutting a cake beneath the Hoyga Hodan Baraawe banner" loading="lazy"></div><figcaption><span>Baraawe Launch</span><span class="gt">Chapter 02</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Vendor Showcase · Harvest stall"><div class="ph"><img src="assets/images/IMG-20260802-WA0058.jpg" alt="Hands with gold bangles holding a basket of tomatoes" loading="lazy"></div><figcaption><span>Vendor Showcase</span><span class="gt">Harvest Stall</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Dhaqan Goob · Cultural corner"><div class="ph"><img src="assets/images/IMG-20260802-WA0008.jpg" alt="Group under striped canopy at the Dhaqan Goob cultural corner" loading="lazy"></div><figcaption><span>Dhaqan Goob</span><span class="gt">Cultural Corner</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="The Circle · Networking & games"><div class="ph"><img src="assets/images/IMG-20260802-WA0010.jpg" alt="Women in maroon striped garb seated in a circle" loading="lazy"></div><figcaption><span>The Circle</span><span class="gt">Networking</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Sponsor Wall · Gifting moments"><div class="ph"><img src="assets/images/IMG-20260802-WA0112.jpg" alt="Two smiling women holding a golden gift bag at the sponsor backdrop" loading="lazy"></div><figcaption><span>Sponsor Wall</span><span class="gt">Gifting</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="The Gathering · Edition 04"><div class="ph"><img src="assets/images/IMG-20260802-WA0114.jpg" alt="Large indoor gathering of women in colorful traditional dress" loading="lazy"></div><figcaption><span>The Gathering</span><span class="gt">Edition 04</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Dhaqan Goob · Maker-to-maker exchange"><div class="ph"><img src="assets/images/IMG-20260802-WA0006.jpg" alt="Two women exchanging a hand-painted tote bag before the Somali flag" loading="lazy"></div><figcaption><span>Maker Exchange</span><span class="gt">Dhaqan Goob</span></figcaption></figure>
     </div>
 
     <div class="film-grid">
       <div class="film rv" data-film>
-        <div class="layer fa" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/13d95a879-3138-4a92-b36d-d15dbd9e5e5f.png')"></div>
-        <div class="layer fb" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/13d95a879-3138-4a92-b36d-d15dbd9e5e5f.png')"></div>
+        <video src="assets/videos/VID-20260802-WA0134.mp4" autoplay loop muted playsinline></video>
         <div class="film-hud"><span class="rec">LOOP</span><span class="tc">00:00:00</span></div>
         <div class="film-bar">
           <div><small>Film 01 · Vendor Stories</small><h3>“My stall, my story.”</h3></div>
@@ -688,8 +687,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
         </div>
       </div>
       <div class="film rv" style="--d:.12s" data-film>
-        <div class="layer fa" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f03b9c82-e44b-4d86-8ffa-ff25f4e96763.png')"></div>
-        <div class="layer fb" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f03b9c82-e44b-4d86-8ffa-ff25f4e96763.png')"></div>
+        <video src="assets/videos/VID-20260802-WA0145.mp4" autoplay loop muted playsinline></video>
         <div class="film-hud"><span class="rec">LOOP</span><span class="tc">00:00:00</span></div>
         <div class="film-bar">
           <div><small>Film 02 · Dhaanto Nights</small><h3>Drum, stick &amp; song.</h3></div>
@@ -768,7 +766,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 <!-- ROADMAP -->
 <section id="roadmap" class="sec" style="padding-bottom:0">
   <div class="banner">
-    <img class="kb" src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1eb95a64b-6dcf-44f6-9742-bb5ed80b6371.png" alt="Mogadishu coastline at golden hour">
+    <img class="kb" src="assets/images/IMG-20260802-WA0006.jpg" alt="Mogadishu coastline at golden hour">
     <div class="ovl">
       <div class="wrap">
         <span class="bkick rv">08 · Our Vision for Somalia</span>
@@ -1095,6 +1093,8 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       last = performance.now();
       film.classList.toggle('paused', !playing);
       btn.textContent = playing ? '❚ Pause' : '► Play';
+      var v = film.querySelector('video');
+      if(v) playing ? v.play() : v.pause();
     });
     function pad(n){ return String(n).padStart(2,'0'); }
     function loop(now){
