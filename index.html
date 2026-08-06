@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoyga Hodan — Youth Women Empowerment Through Creative Entrepreneurship</title>
+<meta name="description" content="Hoyga Hodan (“Hodan’s Hub”) empowers youth women in Somalia through creative entrepreneurship, skills training, and community-driven economic development. Founded 2025 · Mogadishu.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/900.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/600-italic.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/outfit/300.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/outfit/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/outfit/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/outfit/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/outfit/700.css">
+<style>
+:root{
+  --cream:#F7EEDF; --cream2:#EFDFC6; --card:#FFFBF2;
+  --ink:#24090D; --ink2:#33121A;
+  --crimson:#A81C2A; --crimson-d:#7E1220;
+  --maroon:#4A1119; --deep:#2A0B0E;
+  --orange:#CE5B1F; --amber:#E59A3A; --sand:#EBD9BF;
+  --line:rgba(36,9,13,.18); --line-l:rgba(247,238,223,.22);
+  --cloth:url("https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1cfa98840-159f-4d11-b6f1-3c265cd06224.png");
+  --disp:"Fraunces",Georgia,serif; --body:"Outfit",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden}
+::selection{background:var(--crimson);color:var(--cream)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+section{scroll-margin-top:92px;position:relative}
+.wrap{max-width:1220px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+h1,h2,h3,.disp{font-family:var(--disp);font-weight:900;letter-spacing:-.02em;line-height:1.02}
+h2{font-size:clamp(34px,4.6vw,58px)}
+h2 em,h1 em{font-style:italic;font-weight:600;color:var(--crimson)}
+.dark h2 em,.sea h2 em{color:var(--amber)}
+p{max-width:68ch}
+
+/* noise */
+.noise{position:fixed;inset:0;z-index:2000;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* cloth bands */
+.cloth-band{height:86px;background:var(--cloth) center/cover;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+.cloth-strip{height:14px;background:var(--cloth) center/auto 100% repeat-x}
+
+/* header */
+#topbar{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
+#topbar.scrolled{background:rgba(247,238,223,.94);border-color:var(--line);box-shadow:0 8px 30px rgba(36,9,13,.1);backdrop-filter:blur(8px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{font-family:var(--disp);font-weight:900;font-size:21px;display:flex;align-items:center;gap:9px}
+.logo .star{color:var(--crimson);display:inline-block;animation:spin 14s linear infinite}
+.nav-links{display:flex;gap:24px}
+.nav-links a{font-size:12.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--crimson);transform:scaleX(0);transform-origin:right;transition:transform .35s}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);transform-origin:left}
+.nav-links a.active{color:var(--crimson)}
+.nav-cta{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--cream);padding:12px 20px;border:1.5px solid var(--ink);transition:.3s}
+.nav-cta:hover{background:var(--crimson);border-color:var(--crimson)}
+#navToggle{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;position:relative;z-index:120}
+#navToggle span{position:absolute;left:10px;right:10px;height:2px;background:var(--ink);transition:.4s}
+#navToggle span:nth-child(1){top:17px}#navToggle span:nth-child(2){top:26px}
+body.menu-open #navToggle span{background:var(--cream)}
+body.menu-open #navToggle span:nth-child(1){top:21px;transform:rotate(45deg)}
+body.menu-open #navToggle span:nth-child(2){top:21px;transform:rotate(-45deg)}
+#mobileMenu{position:fixed;inset:0;background:var(--deep);z-index:110;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 10vw;gap:6px;transform:translateY(-102%);transition:transform .55s cubic-bezier(.7,0,.2,1)}
+body.menu-open #mobileMenu{transform:none}
+#mobileMenu a{font-family:var(--disp);font-weight:900;font-size:clamp(28px,7vw,42px);color:var(--cream);opacity:0;transform:translateY(18px);transition:.5s}
+#mobileMenu a:hover{color:var(--amber)}
+body.menu-open #mobileMenu a{opacity:1;transform:none}
+body.menu-open #mobileMenu a:nth-child(1){transition-delay:.1s}body.menu-open #mobileMenu a:nth-child(2){transition-delay:.16s}
+body.menu-open #mobileMenu a:nth-child(3){transition-delay:.22s}body.menu-open #mobileMenu a:nth-child(4){transition-delay:.28s}
+body.menu-open #mobileMenu a:nth-child(5){transition-delay:.34s}body.menu-open #mobileMenu a:nth-child(6){transition-delay:.4s}
+body.menu-open #mobileMenu a:nth-child(7){transition-delay:.46s}body.menu-open #mobileMenu a:nth-child(8){transition-delay:.52s}
+@media(max-width:980px){.nav-links,.nav-cta{display:none}#navToggle{display:block}}
+
+/* kickers / reveals */
+.kick{display:flex;align-items:center;gap:14px;margin-bottom:22px;font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--crimson)}
+.kick .kick-num{font-family:var(--disp);font-weight:600;font-size:14px;border:1.5px solid currentColor;padding:2px 8px}
+.kick .kick-line{width:52px;height:1.5px;background:currentColor}
+.dark .kick,.sea .kick{color:var(--amber)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.65,.2,1);transition-delay:var(--d,0s)}
+.rv.on{opacity:1;transform:none}
+.lm{display:block;overflow:hidden}
+.lm>span{display:block;transform:translateY(112%);transition:transform 1s cubic-bezier(.2,.65,.15,1);transition-delay:var(--d,0s)}
+.lm.on>span,body.loaded .hero-lm>span{transform:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font:600 12.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;border:1.5px solid var(--ink);color:var(--ink);position:relative;overflow:hidden;z-index:1;cursor:pointer;background:transparent;transition:color .35s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .4s cubic-bezier(.6,0,.2,1);z-index:-1}
+.btn:hover{color:var(--cream)}.btn:hover::before{transform:none}
+.btn-crimson{background:var(--crimson);border-color:var(--crimson);color:#FFF3E2}
+.btn-amber{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.btn-amber::before{background:var(--cream)}
+.btn-amber:hover{color:var(--ink)}
+
+/* ticker */
+.ticker{background:var(--crimson);color:#FFF3E2;overflow:hidden;transform:rotate(-1.2deg) scale(1.02);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);position:relative;z-index:5}
+.ticker.rev{transform:rotate(1.1deg) scale(1.02);background:var(--amber);color:var(--ink)}
+.ticker-track{display:flex;width:max-content;animation:tick 30s linear infinite}
+.ticker.rev .ticker-track{animation-direction:reverse}
+.ticker-track span{padding:13px 0;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+@keyframes tick{to{transform:translateX(-50%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* hero */
+.hero{padding:150px 0 70px;position:relative;overflow:hidden}
+.ghost-word{position:absolute;top:60px;right:-30px;font-family:var(--disp);font-weight:900;font-size:clamp(120px,20vw,300px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(168,28,42,.14);pointer-events:none;user-select:none;z-index:0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,70px);align-items:center;position:relative;z-index:1}
+.hero-title{font-size:clamp(52px,7.4vw,104px);margin:14px 0 8px}
+.hero-title .row2{color:var(--crimson)}
+.hero-title .star{color:var(--amber);font-size:.4em;vertical-align:.9em;display:inline-block;animation:spin 10s linear infinite}
+.hero-tag{font-family:var(--disp);font-style:italic;font-weight:600;font-size:clamp(19px,2.1vw,26px);color:var(--orange);margin-bottom:18px}
+.hero-copy{font-size:clamp(15px,1.35vw,18px);font-weight:300;margin-bottom:30px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.hero-chips{display:flex;gap:12px;flex-wrap:wrap}
+.hero-chips span{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1.5px solid var(--ink);padding:8px 14px;background:var(--card)}
+.hero-chips b{color:var(--crimson)}
+.scroll-cue{margin-top:46px;display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--orange)}
+.scroll-cue i{width:1.5px;height:44px;background:var(--ink);display:block;position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;inset:0;background:var(--crimson);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(-100%)}60%{transform:translateY(100%)}100%{transform:translateY(100%)}}
+
+/* collage */
+.hero-collage{position:relative;min-height:640px}
+.pc{position:absolute;background:var(--card);padding:10px 10px 14px;border:1px solid rgba(36,9,13,.12);box-shadow:0 24px 50px rgba(36,9,13,.24);transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.pc::before{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-2deg);width:78px;height:24px;background:rgba(229,154,58,.6);border-left:1px dashed rgba(36,9,13,.25);border-right:1px dashed rgba(36,9,13,.25)}
+.pc .ph{overflow:hidden;aspect-ratio:1/1}
+.pc img{width:100%;height:100%;object-fit:cover}
+.kb img{animation:kenburns 16s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.12) translate(2.5%,-2%)}}
+.pc figcaption{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding-top:10px;display:flex;justify-content:space-between;color:var(--ink2)}
+.pc1{top:0;left:0;width:57%;transform:rotate(-4deg);z-index:1}
+.pc2{top:7%;right:0;width:52%;transform:rotate(3deg);z-index:2}
+.pc3{bottom:3%;left:9%;width:55%;transform:rotate(-2deg);z-index:3}
+.pc:hover{transform:rotate(0) scale(1.03);z-index:9;box-shadow:0 34px 70px rgba(36,9,13,.32)}
+.stamp{position:absolute;right:1%;bottom:-2%;width:128px;height:128px;z-index:4;animation:spin 22s linear infinite}
+.stamp text{font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:.24em;fill:var(--crimson)}
+.stamp .cstar{font-size:30px;fill:var(--amber)}
+.ticket{position:absolute;left:-14px;top:47%;z-index:5;background:var(--cloth) center/cover;color:#FFF3E2;text-shadow:0 1px 0 rgba(0,0,0,.5);border:1.5px solid var(--ink);padding:12px 16px;transform:rotate(-4deg);box-shadow:6px 6px 0 var(--ink);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.ticket small{display:block;font-weight:600;font-size:10px;letter-spacing:.1em;opacity:.9}
+
+/* sections */
+.sec{padding:clamp(76px,9vw,128px) 0}
+.sec-head{margin-bottom:clamp(36px,5vw,64px)}
+.lead{font-size:clamp(16px,1.5vw,20px);font-weight:300}
+
+/* who */
+.who-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(34px,5vw,80px);align-items:start}
+.who-sticky{position:sticky;top:110px}
+.who-sticky h2{margin-bottom:22px}
+.belief{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.belief span{font-family:var(--disp);font-style:italic;font-weight:600;font-size:17px;padding:8px 18px;border:1.5px solid var(--ink)}
+.belief span:nth-child(1){background:var(--crimson);color:#FFF3E2;border-color:var(--crimson)}
+.belief span:nth-child(2){background:var(--amber);border-color:var(--amber)}
+.belief span:nth-child(3){background:var(--maroon);color:#F3E3D0;border-color:var(--maroon)}
+.who-body p{margin-bottom:20px;font-weight:300;font-size:clamp(15px,1.3vw,17.5px)}
+.who-body p b{font-weight:600}
+blockquote{margin-top:36px;border-left:6px solid var(--crimson);background:var(--card);padding:clamp(24px,3vw,40px);position:relative;box-shadow:0 18px 44px rgba(36,9,13,.12)}
+blockquote::before{content:"“";font-family:var(--disp);font-weight:900;font-size:90px;color:var(--amber);position:absolute;top:-8px;left:18px;line-height:1}
+blockquote p{font-family:var(--disp);font-style:italic;font-weight:600;font-size:clamp(18px,1.9vw,24px);line-height:1.45;padding-left:56px}
+blockquote cite{display:block;margin-top:16px;padding-left:56px;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+
+/* story */
+#story{background:var(--cream2)}
+.story-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(34px,5vw,80px)}
+.story-sticky{position:sticky;top:110px;align-self:start}
+.story-sticky h2{margin-bottom:20px}
+.story-img{margin-top:30px;border:1.5px solid var(--ink);box-shadow:10px 10px 0 var(--crimson)}
+.story-img .ph{overflow:hidden}
+.story-img figcaption{background:var(--ink);color:var(--cream);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:10px 14px}
+.tl{border-left:2px solid var(--line);padding-left:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:34px}
+.tl-item{position:relative;background:var(--card);border:1.5px solid var(--ink);padding:clamp(20px,2.6vw,32px);transition:transform .4s,box-shadow .4s}
+.tl-item:hover{transform:translateX(8px);box-shadow:-8px 8px 0 var(--amber)}
+.tl-item::before{content:"";position:absolute;left:calc(-1 * clamp(24px,3vw,44px) - 8px);top:30px;width:14px;height:14px;background:var(--crimson);border:2px solid var(--ink);border-radius:50%}
+.tl-year{display:inline-block;font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.1em;background:var(--ink);color:var(--cream);padding:5px 12px;margin-bottom:12px}
+.tl-item h3{font-size:clamp(20px,2vw,26px);margin-bottom:10px}
+.tl-item p{font-weight:300;font-size:15px}
+
+/* programs */
+.stack{display:flex;flex-direction:column;gap:34px}
+.p-card{position:sticky;background:var(--card);border:1.5px solid var(--ink);border-left:8px solid var(--acc,var(--crimson));box-shadow:0 -14px 40px rgba(36,9,13,.14);padding:clamp(24px,3.4vw,46px);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(22px,3vw,44px)}
+.p-card:nth-child(1){--acc:var(--crimson);top:96px}
+.p-card:nth-child(2){--acc:var(--orange);top:122px}
+.p-card:nth-child(3){--acc:var(--amber);top:148px}
+.p-card:nth-child(4){--acc:var(--maroon);top:174px}
+.p-num{font-family:var(--disp);font-weight:900;font-size:clamp(40px,4.6vw,64px);color:transparent;-webkit-text-stroke:1.5px var(--acc);line-height:1;margin-bottom:14px}
+.p-card h3{font-size:clamp(22px,2.4vw,32px);margin-bottom:14px}
+.p-card p{font-weight:300;font-size:15.5px;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags span{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--line);padding:7px 13px;background:var(--cream);transition:.3s}
+.tags span:hover{background:var(--acc);border-color:var(--acc);color:var(--cream)}
+.evlist{columns:2;gap:26px;font-size:14.5px;font-weight:300}
+.evlist li{list-style:none;margin-bottom:9px;break-inside:avoid;padding-left:20px;position:relative}
+.evlist li::before{content:"✦";position:absolute;left:0;color:var(--acc);font-size:11px;top:3px}
+.p-img{border:1.5px solid var(--ink);align-self:start}
+.p-img .ph{overflow:hidden;aspect-ratio:4/3}
+.p-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.p-card:hover .p-img img{transform:scale(1.06)}
+.p-img figcaption{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:9px 12px;border-top:1.5px solid var(--ink);background:var(--cream)}
+
+/* impact */
+.dark{background:var(--deep);color:#F3E3D0}
+.dark .lead{color:rgba(243,227,208,.8)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--line-l);border:1.5px solid var(--line-l);margin-bottom:clamp(40px,5vw,64px)}
+.stat{background:var(--deep);padding:clamp(26px,3vw,44px) clamp(18px,2vw,32px);transition:background .4s}
+.stat:hover{background:var(--maroon)}
+.stat-num{font-family:var(--disp);font-weight:900;font-size:clamp(44px,5.4vw,80px);color:var(--amber);line-height:1;display:block}
+.stat:nth-child(odd) .stat-num{color:var(--orange)}
+.stat-label{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;display:block;margin-top:12px;color:rgba(243,227,208,.75)}
+.impact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(30px,4vw,60px);align-items:start}
+.hl{display:flex;flex-direction:column;gap:16px}
+.hl li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-weight:300;font-size:clamp(15px,1.35vw,17.5px);border-bottom:1px solid var(--line-l);padding-bottom:16px}
+.hl li::before{content:"✦";color:var(--amber);flex:0 0 auto;margin-top:2px}
+.cost-card{background:var(--crimson);color:#FFF3E2;padding:clamp(26px,3vw,40px);border:1.5px solid var(--amber);box-shadow:10px 10px 0 var(--maroon);transform:rotate(1.5deg);transition:transform .4s}
+.cost-card:hover{transform:rotate(0)}
+.cost-card .big{font-family:var(--disp);font-weight:900;font-size:clamp(52px,5vw,76px);line-height:1}
+.cost-card p{font-weight:300;font-size:15px;margin-top:10px}
+
+/* gallery */
+.g-masonry{columns:3;gap:22px}
+.g-item{break-inside:avoid;margin-bottom:22px;border:1.5px solid var(--ink);background:var(--card);cursor:zoom-in;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.g-item:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(36,9,13,.2)}
+.g-item .ph{overflow:hidden}
+.g-item img{width:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.g-item:hover img{transform:scale(1.06)}
+.g-item figcaption{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 14px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-top:1.5px solid var(--ink);background:var(--cream);transition:background .3s,color .3s}
+.g-item:hover figcaption{background:var(--crimson);color:#FFF3E2}
+.g-item figcaption .gt{color:var(--orange);font-size:10px}
+.g-item:hover figcaption .gt{color:var(--amber)}
+/* lightbox */
+#lightbox{position:fixed;inset:0;z-index:1500;background:rgba(42,11,14,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:4vh 4vw;gap:16px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:min(1080px,92vw);max-height:78vh;border:2px solid var(--cream);box-shadow:0 30px 80px rgba(0,0,0,.5);object-fit:contain}
+#lbCap{color:var(--cream);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-align:center}
+.lb-btn{position:absolute;background:none;border:1.5px solid var(--cream);color:var(--cream);width:52px;height:52px;font-size:20px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
+.lb-btn:hover{background:var(--crimson);border-color:var(--crimson)}
+#lbClose{top:22px;right:22px}
+#lbPrev{left:22px;top:50%;transform:translateY(-50%)}
+#lbNext{right:22px;top:50%;transform:translateY(-50%)}
+/* films */
+.film-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:clamp(40px,5vw,70px)}
+.film{position:relative;border:1.5px solid var(--ink);aspect-ratio:16/10;overflow:hidden;background:var(--ink)}
+.film .layer{position:absolute;inset:0;background-size:cover;background-position:center}
+.film .fa{animation:filmA 14s ease-in-out infinite}
+.film .fb{animation:filmB 14s ease-in-out infinite}
+@keyframes filmA{0%,40%{opacity:1;transform:scale(1.04)}50%,90%{opacity:0;transform:scale(1.14)}100%{opacity:1;transform:scale(1.04)}}
+@keyframes filmB{0%,40%{opacity:0;transform:scale(1.14)}50%,90%{opacity:1;transform:scale(1.04)}100%{opacity:0;transform:scale(1.14)}}
+.film.paused .layer{animation-play-state:paused}
+.film::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 2px,transparent 2px 5px),radial-gradient(120% 90% at 50% 50%,transparent 55%,rgba(20,4,6,.55));pointer-events:none}
+.film-hud{position:absolute;top:12px;left:14px;right:14px;z-index:3;display:flex;justify-content:space-between;color:#FFF3E2;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.film-hud .rec::before{content:"●";color:var(--amber);margin-right:6px;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.film-bar{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;background:linear-gradient(0deg,rgba(20,4,6,.85),transparent);color:var(--cream)}
+.film-bar h3{font-size:clamp(17px,1.6vw,21px)}
+.film-bar small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:700}
+.tc{font-variant-numeric:tabular-nums;font-weight:600;font-size:13px;letter-spacing:.1em;color:var(--amber)}
+.film-btn{background:none;border:1.5px solid var(--cream);color:var(--cream);font:700 10px var(--body);letter-spacing:.16em;text-transform:uppercase;padding:8px 12px;cursor:pointer;transition:.3s}
+.film-btn:hover{background:var(--crimson);border-color:var(--crimson)}
+.films-note{margin-top:18px;font-size:13px;font-weight:300;color:var(--ink2)}
+.films-note b{color:var(--crimson)}
+
+/* team */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.t-card{border:1.5px solid var(--ink);background:var(--card);padding:28px 22px;position:relative;transition:transform .4s,box-shadow .4s;overflow:hidden}
+.t-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:var(--cloth) center/auto 100% repeat-x;border-top:1.5px solid var(--ink)}
+.t-card:hover{transform:translateY(-10px);box-shadow:0 24px 44px rgba(36,9,13,.18)}
+.mono{width:76px;height:76px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:900;font-size:26px;color:var(--cream);background:var(--tc);border:2px solid var(--ink);margin-bottom:18px;position:relative}
+.mono::after{content:"";position:absolute;inset:-7px;border:1.5px dashed var(--tc);border-radius:50%;animation:spin 18s linear infinite}
+.t-card h3{font-size:20px;margin-bottom:4px}
+.t-role{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--tc);margin-bottom:12px;display:block}
+.t-card p{font-size:13.5px;font-weight:300}
+.hire-note{margin-top:30px;border:1.5px dashed var(--ink);padding:18px 24px;font-size:14px;background:var(--cream2)}
+.hire-note b{color:var(--crimson)}
+
+/* partners */
+#partners{background:var(--cream2)}
+.prow{display:grid;grid-template-columns:220px 170px 1fr;gap:clamp(16px,3vw,40px);align-items:center;padding:clamp(22px,3vw,34px) 10px;border-top:1.5px solid var(--ink);position:relative;transition:background .3s,padding-left .3s}
+.prow:last-of-type{border-bottom:1.5px solid var(--ink)}
+.prow:hover{background:var(--card);padding-left:24px}
+.prow::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--crimson);transition:width .3s}
+.prow:hover::before{width:8px}
+.prow h3{font-size:clamp(20px,2vw,26px)}
+.ptype{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:var(--maroon);color:#F3E3D0;padding:7px 12px;justify-self:start}
+.prow:nth-child(2) .ptype{background:var(--crimson);color:#FFF3E2}
+.prow:nth-child(3) .ptype{background:var(--amber);color:var(--ink)}
+.prow p{font-weight:300;font-size:15px}
+
+/* roadmap */
+.banner{position:relative;height:min(72vh,560px);overflow:hidden;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+.banner img{width:100%;height:100%;object-fit:cover}
+.banner .ovl{position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,11,14,.2),rgba(42,11,14,.78));display:flex;align-items:flex-end}
+.banner .ovl .wrap{padding-bottom:clamp(30px,5vw,60px)}
+.banner h2{color:var(--cream);font-size:clamp(30px,4.4vw,56px);max-width:24ch}
+.banner h2 em{color:var(--amber)}
+.banner .bkick{color:var(--amber);font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;margin-bottom:14px;display:block}
+.rm-bar{display:flex;height:14px;border:1.5px solid var(--ink);margin:clamp(36px,5vw,60px) 0 26px;overflow:hidden}
+.rm-bar i{transition:filter .3s}
+.rm-bar i:nth-child(1){background:var(--crimson);flex:1}
+.rm-bar i:nth-child(2){background:var(--amber);flex:2}
+.rm-bar i:nth-child(3){background:var(--maroon);flex:2}
+.rm-bar i:hover{filter:brightness(1.2)}
+.rm-years{display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:34px;color:var(--ink2)}
+.rm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rm-card{border:1.5px solid var(--ink);background:var(--card);padding:clamp(22px,2.6vw,34px);position:relative;transition:transform .4s,box-shadow .4s}
+.rm-card:hover{transform:translateY(-8px);box-shadow:0 22px 44px rgba(36,9,13,.18)}
+.rm-card::before{content:"";position:absolute;top:0;left:0;right:0;height:10px;background:var(--rc)}
+.rm-ph{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rc);margin:10px 0 6px;display:block}
+.rm-card h3{font-size:clamp(21px,2vw,27px);margin-bottom:6px}
+.rm-time{font-family:var(--disp);font-style:italic;font-weight:600;color:var(--ink2);margin-bottom:16px;display:block}
+.rm-cities{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+.rm-cities span{font-size:11px;font-weight:600;border:1px solid var(--line);padding:5px 10px;background:var(--cream)}
+.rm-num{font-family:var(--disp);font-weight:900;font-size:clamp(30px,3vw,44px);color:var(--rc)}
+.rm-num small{font-size:.42em;font-weight:700;letter-spacing:.08em}
+
+/* theory */
+.sea{background:var(--maroon);color:#F3E3D0}
+.chain{position:relative;display:flex;flex-direction:column;max-width:900px}
+.chain::before{content:"";position:absolute;left:64px;top:10px;bottom:10px;width:2px;background:var(--line-l)}
+.step{display:grid;grid-template-columns:130px 1fr;gap:clamp(16px,3vw,40px);align-items:start;padding:16px 0}
+.step:nth-child(2){margin-left:3%}.step:nth-child(3){margin-left:6%}.step:nth-child(4){margin-left:9%}
+.step:nth-child(5){margin-left:12%}.step:nth-child(6){margin-left:15%}.step:nth-child(7){margin-left:18%}
+.step-k{font-family:var(--disp);font-weight:900;font-size:15px;letter-spacing:.1em;text-align:center;padding:12px 8px;border:1.5px solid var(--deep);box-shadow:4px 4px 0 rgba(0,0,0,.4);position:relative;z-index:1}
+.step:nth-child(1) .step-k{background:var(--crimson);color:#FFF3E2}
+.step:nth-child(2) .step-k{background:var(--amber);color:var(--ink)}
+.step:nth-child(3) .step-k{background:var(--cream);color:var(--ink)}
+.step:nth-child(4) .step-k{background:var(--sand);color:var(--ink)}
+.step:nth-child(5) .step-k{background:var(--amber);color:var(--ink)}
+.step:nth-child(6) .step-k{background:var(--crimson);color:#FFF3E2}
+.step:nth-child(7) .step-k{background:var(--cream);color:var(--crimson)}
+.step p{font-weight:300;font-size:clamp(15px,1.4vw,18px)}
+.step p b{font-weight:600;color:var(--amber)}
+
+/* why bento */
+.why-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.w-card{border:1.5px solid var(--ink);background:var(--card);padding:clamp(22px,2.6vw,34px);position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.w-card:hover{transform:translateY(-8px);box-shadow:0 22px 44px rgba(36,9,13,.16)}
+.w-card::before{content:attr(data-ix);position:absolute;right:14px;top:8px;font-family:var(--disp);font-weight:900;font-size:56px;color:transparent;-webkit-text-stroke:1px var(--line)}
+.w-card h3{font-size:clamp(19px,1.8vw,24px);margin-bottom:12px;padding-right:60px}
+.w-card p{font-weight:300;font-size:14.5px}
+.w-card .mini{font-family:var(--disp);font-weight:900;font-size:clamp(34px,3vw,48px);color:var(--crimson);display:block;margin-bottom:8px}
+.wc-3{grid-column:span 3}.wc-2{grid-column:span 2}
+.wc-6{grid-column:span 6;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;background:var(--amber)}
+.wc-6 h3{padding-right:0}
+.wc-6 p{max-width:52ch}
+
+/* alignment */
+#alignment{background:var(--cream2)}
+.sdg-row{display:grid;grid-template-columns:110px 250px 1fr;gap:clamp(16px,3vw,36px);align-items:center;padding:22px 10px;border-top:1.5px solid var(--ink);transition:background .3s,padding-left .3s}
+.sdg-row:last-of-type{border-bottom:1.5px solid var(--ink)}
+.sdg-row:hover{background:var(--card);padding-left:24px}
+.sdg-badge{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:.06em;color:#fff;padding:14px 8px;text-transform:uppercase}
+.sdg-row h3{font-size:clamp(18px,1.7vw,22px)}
+.sdg-row p{font-weight:300;font-size:14.5px}
+
+/* contact */
+#contact{background:var(--deep);color:#F3E3D0;overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px)}
+.c-item{border-bottom:1px solid var(--line-l);padding:18px 0;display:flex;gap:18px;align-items:baseline}
+.c-item .cl{flex:0 0 110px;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+.c-item a,.c-item span.cv{font-family:var(--disp);font-weight:600;font-size:clamp(16px,1.6vw,21px);color:#F3E3D0;transition:color .3s}
+.c-item a:hover{color:var(--amber)}
+.socials{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.socials span{border:1.5px solid var(--line-l);padding:9px 16px;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:.3s;cursor:default}
+.socials span:hover{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+#contactForm{display:flex;flex-direction:column;gap:20px}
+#contactForm label{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:8px}
+#contactForm input,#contactForm select,#contactForm textarea{width:100%;background:transparent;border:none;border-bottom:1.5px solid var(--line-l);color:#F3E3D0;font-family:var(--body);font-weight:300;font-size:16px;padding:10px 2px;transition:border-color .3s;border-radius:0}
+#contactForm select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23E59A3A' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center}
+#contactForm select option{color:var(--ink)}
+#contactForm input:focus,#contactForm select:focus,#contactForm textarea:focus{outline:none;border-color:var(--amber)}
+#contactForm textarea{resize:vertical;min-height:96px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#formSuccess{display:none;border:1.5px solid var(--amber);background:var(--maroon);padding:clamp(28px,3vw,44px)}
+#formSuccess.show{display:block;animation:pop .6s cubic-bezier(.2,.9,.3,1.3)}
+#formSuccess h3{font-size:clamp(24px,2.4vw,32px);color:var(--amber);margin-bottom:12px}
+#formSuccess p{font-weight:300}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.legal{margin-top:44px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:rgba(243,227,208,.55)}
+
+/* footer */
+footer{background:#180507;color:rgba(243,227,208,.8)}
+.foot-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr 1fr;gap:clamp(26px,4vw,60px);padding:clamp(48px,6vw,80px) 0 40px}
+.foot-grid h4{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+.foot-grid a{display:block;font-weight:300;font-size:14.5px;margin-bottom:10px;transition:color .3s,transform .3s}
+.foot-grid a:hover{color:var(--amber);transform:translateX(6px)}
+.foot-brand{font-family:var(--disp);font-weight:900;font-size:26px;color:var(--cream);margin-bottom:14px}
+.foot-brand .star{color:var(--crimson)}
+.foot-grid p{font-weight:300;font-size:14px}
+.foot-bottom{border-top:1px solid var(--line-l);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:rgba(243,227,208,.5)}
+
+/* responsive */
+@media(max-width:1080px){.team-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.g-masonry{columns:2}}
+@media(max-width:980px){
+  .hero{padding-top:120px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-collage{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+  .pc{position:static;width:auto!important}
+  .pc1{transform:rotate(-2deg)}.pc2{transform:rotate(2deg)}.pc3{transform:rotate(-1.5deg)}
+  .ticket,.stamp{display:none}
+  .who-grid,.story-grid,.impact-grid,.contact-grid,.film-grid{grid-template-columns:1fr}
+  .who-sticky,.story-sticky{position:static}
+  .p-card{grid-template-columns:1fr;position:static}
+  .rm-grid{grid-template-columns:1fr}
+  .prow{grid-template-columns:1fr;gap:10px}
+  .sdg-row{grid-template-columns:1fr;gap:10px}
+  .why-grid .wc-3,.why-grid .wc-2{grid-column:span 6}
+  .step{grid-template-columns:96px 1fr}
+  .step:nth-child(n){margin-left:0}
+  .chain::before{left:48px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .team-grid{grid-template-columns:1fr}
+  .g-masonry{columns:1}
+  .f-row{grid-template-columns:1fr}
+  .evlist{columns:1}
+  .hero-collage{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  #lbPrev{left:8px}#lbNext{right:8px}
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1!important;transform:none!important}
+  .lm>span{transform:none!important}
+  .ticker-track{animation:none!important;flex-wrap:wrap}
+  .film .fb{opacity:0}
+}
+</style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<header id="topbar">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top"><span class="star">✦</span>HOYGA HODAN</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#who" data-spy>Who We Are</a>
+      <a href="#story" data-spy>Story</a>
+      <a href="#programs" data-spy>Programs</a>
+      <a href="#impact" data-spy>Impact</a>
+      <a href="#gallery" data-spy>Gallery</a>
+      <a href="#team" data-spy>Team</a>
+      <a href="#roadmap" data-spy>Roadmap</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Partner With Us</a>
+    <button id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<nav id="mobileMenu" aria-label="Mobile">
+  <a href="#who">Who We Are</a>
+  <a href="#story">Our Story</a>
+  <a href="#programs">Programs</a>
+  <a href="#impact">Impact</a>
+  <a href="#gallery">Gallery &amp; Films</a>
+  <a href="#team">Team</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#contact">Partner With Us</a>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="ghost-word" aria-hidden="true">HODAN</div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kick rv"><span class="kick-num">EST.</span><span class="kick-line"></span><span data-scramble="FOUNDED 2025 · MOGADISHU, SOMALIA">FOUNDED 2025 · MOGADISHU, SOMALIA</span></p>
+      <h1 class="hero-title">
+        <span class="lm hero-lm"><span style="--d:.05s">Hoyga</span></span>
+        <span class="lm hero-lm row2"><span style="--d:.18s">Hodan<span class="star">✦</span></span></span>
+      </h1>
+      <p class="hero-tag lm hero-lm"><span style="--d:.3s">“Hodan’s Hub” — youth women empowerment through creative entrepreneurship.</span></p>
+      <p class="hero-copy rv" style="--d:.4s">We create safe, affordable spaces where young Somali women learn, connect, and launch businesses — wrapping rigorous skills training in culture, commerce, and confidence.</p>
+      <div class="hero-btns rv" style="--d:.5s">
+        <a class="btn btn-crimson" href="#contact">Partner With Us</a>
+        <a class="btn" href="#gallery">See the Events ↓</a>
+      </div>
+      <div class="hero-chips rv" style="--d:.6s">
+        <span><b>4</b> Events Delivered</span>
+        <span><b>600+</b> Women Trained</span>
+        <span><b>$5</b> Ticket Model</span>
+      </div>
+      <div class="scroll-cue rv" style="--d:.7s"><i></i>Scroll the story</div>
+    </div>
+    <div class="hero-collage">
+      <figure class="pc pc1">
+        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/18e6a47b9-14a4-411a-8884-924d52bf31b7.png" alt="Women cutting a celebration cake at the Hoyga Hodan Baraawe launch"></div>
+        <figcaption><span>Baraawe Launch</span><span>Chapter 02</span></figcaption>
+      </figure>
+      <figure class="pc pc2">
+        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f3368569-f0ea-4b60-ad51-2ce27723e880.png" alt="Large gathering of women in colorful traditional dress at a Hoyga Hodan event"></div>
+        <figcaption><span>The Gathering</span><span>Edition 04</span></figcaption>
+      </figure>
+      <figure class="pc pc3">
+        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/167c13545-d167-4cf9-a0a0-eef8620d61c1.png" alt="Young women in maroon striped garb sitting in a circle at an event"></div>
+        <figcaption><span>The Circle</span><span>Networking</span></figcaption>
+      </figure>
+      <div class="ticket">★ $5 Ticket<small>Community Owned</small></div>
+      <svg class="stamp" viewBox="0 0 128 128" aria-hidden="true">
+        <defs><path id="cirPath" d="M64,64 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs>
+        <text><textPath href="#cirPath">HOYGA HODAN ✦ EST. 2025 ✦ MOGADISHU ✦ </textPath></text>
+        <text class="cstar" x="64" y="75" text-anchor="middle">✦</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>&nbsp;HAL-ABUUR ✦ DHAQAN GOOB ✦ BARAANBUR ✦ DHAANTO ✦ SKILLS ✦ MENTORSHIP ✦ MARKET ACCESS  CULTURE ✦ COMMERCE ✦ CONFIDENCE ✦ MOGADISHU ✦&nbsp;</span>
+    <span>&nbsp;HAL-ABUUR ✦ DHAQAN GOOB ✦ BARAANBUR ✦ DHAANTO ✦ SKILLS ✦ MENTORSHIP ✦ MARKET ACCESS  CULTURE ✦ COMMERCE ✦ CONFIDENCE ✦ MOGADISHU ✦&nbsp;</span>
+  </div>
+</div>
+
+<!-- WHO -->
+<section id="who" class="sec">
+  <div class="wrap who-grid">
+    <div class="who-sticky">
+      <p class="kick rv"><span class="kick-num">01</span><span class="kick-line"></span><span data-scramble="WHO WE ARE">WHO WE ARE</span></p>
+      <h2 class="lm"><span>Culture, commerce<br>&amp; <em>confidence.</em></span></h2>
+      <div class="belief rv">
+        <span>Belonging</span><span>Visibility</span><span>Joy</span>
+      </div>
+    </div>
+    <div class="who-body">
+      <p class="rv">Hoyga Hodan (“Hodan’s Hub”) is a grassroots community-based organization founded in 2025 and dedicated to empowering youth women in Somalia through <b>creative entrepreneurship, skills training, and community-driven economic development</b>.</p>
+      <p class="rv" style="--d:.1s">Founded and led by Somali women, we operate at the intersection of culture, commerce, and confidence-building — creating safe, affordable spaces where young women learn, connect, and launch businesses.</p>
+      <p class="rv" style="--d:.2s">We believe that economic empowerment is not just about skills — it is about <b>belonging, visibility, and joy</b>. Every Hoyga Hodan event combines rigorous training with cultural celebration, mentorship with market access, and individual growth with community solidarity.</p>
+      <blockquote class="rv" style="--d:.25s">
+        <p>Our goal is to create a sustainable ecosystem where youth women and businesses thrive together, strengthening the fabric of the Mogadishu community and beyond.</p>
+        <cite>— Hoyga Hodan Founding Vision</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<div class="cloth-strip" aria-hidden="true"></div>
+
+<!-- STORY -->
+<section id="story" class="sec">
+  <div class="wrap story-grid">
+    <div class="story-sticky">
+      <p class="kick rv"><span class="kick-num">02</span><span class="kick-line"></span><span data-scramble="OUR STORY">OUR STORY</span></p>
+      <h2 class="lm"><span>From one $5 ticket to a <em>movement.</em></span></h2>
+      <p class="lead rv" style="margin-top:20px">Hoyga Hodan began as a simple idea: <em>what if Somali youth women had a space that was theirs — affordable, creative, and built for their realities?</em></p>
+      <figure class="story-img rv" style="--d:.15s">
+        <div class="ph kb"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/139aadf5a-fd07-4a26-8a77-563f026122c4.png" alt="Vendor’s hands with gold bangles holding a woven basket of tomatoes"></div>
+        <figcaption>Vendor Showcase · Market Expo</figcaption>
+      </figure>
+    </div>
+    <div class="tl">
+      <article class="tl-item rv"><span class="tl-year">2025 · THE IDEA</span><h3>A space that was theirs</h3><p>Founder Hodan Abdullaahi Mohamed launched the first Hoyga Hodan event in Mogadishu with community trust, local partnerships, and a $5 ticket model.</p></article>
+      <article class="tl-item rv" style="--d:.08s"><span class="tl-year">EVENT 01 · 150 WOMEN</span><h3>They left with confidence</h3><p>That first event brought together 150 young women. They painted calabashes, shared business ideas, danced Baraanbur, and left with something rare: confidence.</p></article>
+      <article class="tl-item rv" style="--d:.12s"><span class="tl-year">THE SPARK</span><h3>Word spread. Media followed.</h3><p>Social media exploded. Local TV covered it. The demand for this kind of space was not just real — it was urgent.</p></article>
+      <article class="tl-item rv" style="--d:.16s"><span class="tl-year">EDITIONS 02–04</span><h3>Each larger, each deeper</h3><p>Three more editions followed — including the Baraawe chapter launch and the Dhaqan Goob cultural corner — each proving the model.</p></article>
+      <article class="tl-item rv" style="--d:.2s"><span class="tl-year">TODAY · 2026</span><h3>Ready to scale</h3><p>We have proven the model. We have the community. We have the media partnership. What we need now is institutional backing to take this national.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">03</span><span class="kick-line"></span><span data-scramble="WHAT WE DO">WHAT WE DO</span></p>
+      <h2 class="lm"><span>Four engines of <em>empowerment.</em></span></h2>
+    </div>
+    <div class="stack">
+      <article class="p-card">
+        <div>
+          <div class="p-num">01</div>
+          <h3>Skills Training &amp; Workshops</h3>
+          <p>The backbone of Hoyga Hodan is hands-on, market-relevant training delivered by local experts. Our half-day workshops cover:</p>
+          <div class="tags">
+            <span>Business Planning</span><span>AI &amp; Digital Innovation</span><span>Content Creation</span>
+            <span>Financial Literacy</span><span>Leadership &amp; Public Speaking</span><span>Creative Crafts</span>
+          </div>
+        </div>
+        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1c02016c0-dd91-48b0-96f9-36f4a432a770.png" alt="Business training workshop with mentor at a whiteboard"></div><figcaption>From idea to business model</figcaption></figure>
+      </article>
+      <article class="p-card">
+        <div>
+          <div class="p-num">02</div>
+          <h3>Hoyga Hodan Events</h3>
+          <p>Our signature multi-day events combine training with celebration. Each event includes:</p>
+          <ul class="evlist">
+            <li>Inspirational talks by successful women entrepreneurs</li>
+            <li>Success story sessions where participants share journeys</li>
+            <li>Business exhibitions with vendor stalls</li>
+            <li>Panel discussions on women’s economic participation</li>
+            <li>Networking with mentors and buyers</li>
+            <li>Creative &amp; cultural performances — Baraanbur, Dhaanto, poetry</li>
+            <li>Awards &amp; recognition for outstanding participants</li>
+            <li>Media interviews and photography coverage</li>
+          </ul>
+        </div>
+        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/12467fc07-f79c-47f7-99cb-d5ad2fd732b4.png" alt="Dhaqan Goob cultural corner under a striped canopy"></div><figcaption>Dhaqan Goob · cultural corner</figcaption></figure>
+      </article>
+      <article class="p-card">
+        <div>
+          <div class="p-num">03</div>
+          <h3>Mentorship &amp; Market Linkages</h3>
+          <p>Training without follow-up is wasted. We match participants with local business leaders for ongoing mentorship, and we organize <b>quarterly market expos</b> that connect entrepreneurs directly with buyers, investors, and government procurement officers.</p>
+          <div class="tags"><span>Mentor Matching</span><span>Quarterly Market Expos</span><span>Buyers &amp; Investors</span><span>Procurement Access</span></div>
+        </div>
+        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/16c7aed1f-357d-40b6-89f2-57fae7103564.png" alt="Woven baskets of grains, fruits and produce at a market expo"></div><figcaption>Direct to market</figcaption></figure>
+      </article>
+      <article class="p-card">
+        <div>
+          <div class="p-num">04</div>
+          <h3>Digital Platform</h3>
+          <p>We are building an online learning portal to reach youth women in rural areas and the diaspora — extending the Hub far beyond Mogadishu.</p>
+          <div class="tags"><span>Somali-Language Training Videos</span><span>Mentor Matching System</span><span>Business Directory</span><span>Digital Certificates</span></div>
+        </div>
+        <figure class="p-img"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1eb95a64b-6dcf-44f6-9742-bb5ed80b6371.png" alt="Mogadishu coastline at golden hour"></div><figcaption>Reaching rural &amp; diaspora</figcaption></figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="sec dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">04</span><span class="kick-line"></span><span data-scramble="TRACK RECORD">TRACK RECORD</span></p>
+      <h2 class="lm"><span>Proof, not <em>promises.</em></span></h2>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Events Delivered</span></div>
+      <div class="stat"><span class="stat-num" data-count="600" data-suffix="+">0</span><span class="stat-label">Youth Women Trained</span></div>
+      <div class="stat"><span class="stat-num" data-count="90" data-suffix="%">0</span><span class="stat-label">Ticket Sales Rate</span></div>
+      <div class="stat"><span class="stat-num" data-count="20" data-suffix="+">0</span><span class="stat-label">Local Businesses Exhibited</span></div>
+    </div>
+    <div class="impact-grid">
+      <div>
+        <p class="kick rv" style="margin-bottom:24px"><span class="kick-line"></span><span data-scramble="IMPACT HIGHLIGHTS">IMPACT HIGHLIGHTS</span></p>
+        <ul class="hl">
+          <li class="rv">All participants are youth women (ages 18–35).</li>
+          <li class="rv" style="--d:.06s">Events trended on social media across Somalia and the diaspora.</li>
+          <li class="rv" style="--d:.12s">Featured on local television and by social media influencers.</li>
+          <li class="rv" style="--d:.18s">The $5 ticket model proves financial sustainability and community ownership.</li>
+          <li class="rv" style="--d:.24s">Multiple participants launched businesses after attending Hoyga Hodan.</li>
+        </ul>
+      </div>
+      <aside class="cost-card rv" style="--d:.15s">
+        <span class="big">≈ $30</span>
+        <p><b>per participant trained.</b> Hoyga Hodan delivers exceptional value compared to traditional vocational training programs — low cost, high impact.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY + FILMS -->
+<section id="gallery" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">05</span><span class="kick-line"></span><span data-scramble="GALLERY & FILMS">GALLERY &amp; FILMS</span></p>
+      <h2 class="lm"><span>The Hub, <em>in pictures.</em></span></h2>
+      <p class="lead rv" style="margin-top:16px">Every edition leaves behind color, henna, woven baskets and new businesses. Click any frame to view it large.</p>
+    </div>
+    <div class="g-masonry">
+      <figure class="g-item rv" data-cap="Market Expo · Local produce & grains"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/16c7aed1f-357d-40b6-89f2-57fae7103564.png" alt="Woven baskets of grains, limes, coconuts, mangoes and tomatoes on mats" loading="lazy"></div><figcaption><span>Market Expo</span><span class="gt">Produce &amp; Grains</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Baraawe Chapter · Launch ceremony"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/18e6a47b9-14a4-411a-8884-924d52bf31b7.png" alt="Women cutting a cake beneath the Hoyga Hodan Baraawe banner" loading="lazy"></div><figcaption><span>Baraawe Launch</span><span class="gt">Chapter 02</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Vendor Showcase · Harvest stall"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/139aadf5a-fd07-4a26-8a77-563f026122c4.png" alt="Hands with gold bangles holding a basket of tomatoes" loading="lazy"></div><figcaption><span>Vendor Showcase</span><span class="gt">Harvest Stall</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Dhaqan Goob · Cultural corner"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/12467fc07-f79c-47f7-99cb-d5ad2fd732b4.png" alt="Group under striped canopy at the Dhaqan Goob cultural corner" loading="lazy"></div><figcaption><span>Dhaqan Goob</span><span class="gt">Cultural Corner</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="The Circle · Networking & games"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/167c13545-d167-4cf9-a0a0-eef8620d61c1.png" alt="Women in maroon striped garb seated in a circle" loading="lazy"></div><figcaption><span>The Circle</span><span class="gt">Networking</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Sponsor Wall · Gifting moments"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/12d244ee6-80f2-4d35-b328-ef830c31e5dc.png" alt="Two smiling women holding a golden gift bag at the sponsor backdrop" loading="lazy"></div><figcaption><span>Sponsor Wall</span><span class="gt">Gifting</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="The Gathering · Edition 04"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f3368569-f0ea-4b60-ad51-2ce27723e880.png" alt="Large indoor gathering of women in colorful traditional dress" loading="lazy"></div><figcaption><span>The Gathering</span><span class="gt">Edition 04</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Dhaqan Goob · Maker-to-maker exchange"><div class="ph"><img src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1a6e4dc08-1dc6-429a-bbd7-5233ffb38de9.png" alt="Two women exchanging a hand-painted tote bag before the Somali flag" loading="lazy"></div><figcaption><span>Maker Exchange</span><span class="gt">Dhaqan Goob</span></figcaption></figure>
+    </div>
+
+    <div class="film-grid">
+      <div class="film rv" data-film>
+        <div class="layer fa" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/13d95a879-3138-4a92-b36d-d15dbd9e5e5f.png')"></div>
+        <div class="layer fb" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/13d95a879-3138-4a92-b36d-d15dbd9e5e5f.png')"></div>
+        <div class="film-hud"><span class="rec">LOOP</span><span class="tc">00:00:00</span></div>
+        <div class="film-bar">
+          <div><small>Film 01 · Vendor Stories</small><h3>“My stall, my story.”</h3></div>
+          <button class="film-btn" type="button">❚❚ Pause</button>
+        </div>
+      </div>
+      <div class="film rv" style="--d:.12s" data-film>
+        <div class="layer fa" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f03b9c82-e44b-4d86-8ffa-ff25f4e96763.png')"></div>
+        <div class="layer fb" style="background-image:url('https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1f03b9c82-e44b-4d86-8ffa-ff25f4e96763.png')"></div>
+        <div class="film-hud"><span class="rec">LOOP</span><span class="tc">00:00:00</span></div>
+        <div class="film-bar">
+          <div><small>Film 02 · Dhaanto Nights</small><h3>Drum, stick &amp; song.</h3></div>
+          <button class="film-btn" type="button">❚ Pause</button>
+        </div>
+      </div>
+    </div>
+    <p class="films-note rv"><b>✦ Full recap films</b> air on our media partner <b>Astaan TV</b> — @astaantv — after every edition. Preview loops shown here.</p>
+  </div>
+</section>
+
+<div class="cloth-strip" aria-hidden="true"></div>
+
+<!-- TEAM -->
+<section id="team" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">06</span><span class="kick-line"></span><span data-scramble="OUR TEAM">OUR TEAM</span></p>
+      <h2 class="lm"><span>Led by women, for <em>youth women.</em></span></h2>
+    </div>
+    <div class="team-grid">
+      <article class="t-card rv" style="--tc:var(--crimson)">
+        <div class="mono">HM</div>
+        <h3>Hodan Abdullaahi Mohamed</h3>
+        <span class="t-role">Founder &amp; Program Director</span>
+        <p>Visionary community organizer and creative entrepreneur with deep roots in Mogadishu. Drives program design, partnerships, and strategic direction.</p>
+      </article>
+      <article class="t-card rv" style="--tc:var(--orange);--d:.08s">
+        <div class="mono">AI</div>
+        <h3>Abdirzak Haji Ibrahim</h3>
+        <span class="t-role">Technical &amp; Operations Manager</span>
+        <p>Operations and logistics specialist. Manages finances, vendor coordination, event logistics, and day-to-day program delivery.</p>
+      </article>
+      <article class="t-card rv" style="--tc:var(--amber);--d:.16s">
+        <div class="mono">SA</div>
+        <h3>Sadia Mohamed Ali</h3>
+        <span class="t-role">Program Officer</span>
+        <p>Supports workshop coordination, participant engagement, and curriculum development. Links trainees with mentors and market opportunities.</p>
+      </article>
+      <article class="t-card rv" style="--tc:var(--maroon);--d:.24s">
+        <div class="mono">SO</div>
+        <h3>Sowdo Mohamed Omar</h3>
+        <span class="t-role">Communications &amp; Outreach Officer</span>
+        <p>Manages social media, media relations, participant outreach, and brand visibility. Coordinates with Astaan Media for event coverage.</p>
+      </article>
+    </div>
+    <p class="hire-note rv"><b>Growing with purpose →</b> With institutional funding, Hoyga Hodan will hire an <b>M&amp;E Officer</b> and a <b>Finance Officer</b> to strengthen organizational capacity.</p>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">07</span><span class="kick-line"></span><span data-scramble="OUR PARTNERS">OUR PARTNERS</span></p>
+      <h2 class="lm"><span>Built with the <em>community.</em></span></h2>
+    </div>
+    <div class="prow rv">
+      <h3>Astaan Media</h3>
+      <span class="ptype">Media Partner</span>
+      <p>National TV, radio, and digital coverage. Reaches local audiences and the global Somali diaspora.</p>
+    </div>
+    <div class="prow rv" style="--d:.08s">
+      <h3>Local Businesses</h3>
+      <span class="ptype">Sponsors</span>
+      <p>Financial sponsorship, venue access, catering, and in-kind contributions that keep every event alive.</p>
+    </div>
+    <div class="prow rv" style="--d:.16s">
+      <h3>Expert Trainers</h3>
+      <span class="ptype">Volunteers / Stipends</span>
+      <p>Local professionals who deliver workshops in business, technology, finance, and creative arts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="sec" style="padding-bottom:0">
+  <div class="banner">
+    <img class="kb" src="https://image.qwenlm.ai/public_source/cf6d19a8-7f8c-4233-b052-cc44b62db275/1eb95a64b-6dcf-44f6-9742-bb5ed80b6371.png" alt="Mogadishu coastline at golden hour">
+    <div class="ovl">
+      <div class="wrap">
+        <span class="bkick rv">08 · Our Vision for Somalia</span>
+        <h2 class="lm"><span>Hoyga Hodan does not intend to stay in Mogadishu. Our vision is <em>national</em> — and eventually regional.</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:clamp(50px,6vw,80px);padding-bottom:clamp(76px,9vw,128px)">
+    <div class="rm-bar rv" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="rm-years rv"><span>2026</span><span>2027</span><span>2029</span><span>2031</span></div>
+    <div class="rm-grid">
+      <article class="rm-card rv" style="--rc:var(--crimson)">
+        <span class="rm-ph">Phase 1 · Foundation</span>
+        <h3>Year 1</h3>
+        <span class="rm-time">2026 – 2027</span>
+        <div class="rm-cities"><span>Mogadishu</span><span>Baraawe</span><span>Garowe</span><span>Kismayo</span><span>Baidoa</span></div>
+        <div class="rm-num">800 <small>trained annually</small></div>
+      </article>
+      <article class="rm-card rv" style="--rc:var(--amber);--d:.1s">
+        <span class="rm-ph">Phase 2 · Acceleration</span>
+        <h3>Years 2 – 3</h3>
+        <span class="rm-time">2027 – 2029</span>
+        <div class="rm-cities"><span>+ Hargeisa</span><span>Beledweyne</span><span>Jowhar</span><span>Bosaso</span><span>Galkayo</span></div>
+        <div class="rm-num">5,000 <small>cumulative</small></div>
+      </article>
+      <article class="rm-card rv" style="--rc:var(--maroon);--d:.2s">
+        <span class="rm-ph">Phase 3 · Consolidation</span>
+        <h3>Years 4 – 5</h3>
+        <span class="rm-time">2029 – 2031</span>
+        <div class="rm-cities"><span>15+ cities</span><span>30+ local CBO partners</span><span>Every Federal Member State</span></div>
+        <div class="rm-num">15,000 <small>cumulative alumni</small></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- THEORY -->
+<section id="change" class="sec sea">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">09</span><span class="kick-line"></span><span data-scramble="THEORY OF CHANGE">THEORY OF CHANGE</span></p>
+      <h2 class="lm"><span>Simple. Proven. <em>Repeatable.</em></span></h2>
+    </div>
+    <div class="chain">
+      <div class="step rv"><span class="step-k">IF</span><p>we provide <b>affordable, interactive creative entrepreneurship hubs</b></p></div>
+      <div class="step rv"><span class="step-k">THAT</span><p>combine hands-on training in <b>business, AI, content creation, and financial literacy</b></p></div>
+      <div class="step rv"><span class="step-k">WITH</span><p><b>mentorship, market linkages, and alumni networks</b></p></div>
+      <div class="step rv"><span class="step-k">AND</span><p>scale through <b>digital platforms and physical events</b> across Somalia</p></div>
+      <div class="step rv"><span class="step-k">THEN</span><p>youth women gain <b>confidence, skills, and professional networks</b></p></div>
+      <div class="step rv"><span class="step-k">WHICH</span><p>leads to <b>new businesses, income growth, and leadership roles</b></p></div>
+      <div class="step rv"><span class="step-k">ULTIMATELY</span><p>contributing to <b>inclusive economic development and social cohesion</b></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">10</span><span class="kick-line"></span><span data-scramble="WHY PARTNER WITH US">WHY PARTNER WITH US</span></p>
+      <h2 class="lm"><span>Six reasons to <em>invest.</em></span></h2>
+    </div>
+    <div class="why-grid">
+      <article class="w-card wc-3 rv" data-ix="01"><h3>Proven Model</h3><p>Four successful events, 600+ youth women trained, trending social media coverage, and a $5 ticket model that proves community demand and financial viability.</p></article>
+      <article class="w-card wc-3 rv" data-ix="02" style="--d:.08s"><h3>Media Reach</h3><p>Our partnership with Astaan Media gives us national TV, radio, and digital coverage — reaching not just Mogadishu but the global Somali diaspora.</p></article>
+      <article class="w-card wc-2 rv" data-ix="03"><span class="mini">≈$30</span><h3>Low Cost, High Impact</h3><p>Exceptional value per participant compared to traditional vocational training programs.</p></article>
+      <article class="w-card wc-2 rv" data-ix="04" style="--d:.08s"><h3>Cultural Resonance</h3><p>We do not impose foreign models. We wrap skills in Somali celebration — Baraanbur, Dhaanto, poetry, and communal joy — ensuring deep community buy-in.</p></article>
+      <article class="w-card wc-2 rv" data-ix="05" style="--d:.16s"><h3>Youth Women-Led</h3><p>In a country where women’s economic participation is among the world’s lowest, Hoyga Hodan is led by women, for youth women.</p></article>
+      <article class="w-card wc-6 rv"><div><h3>Ready to Scale</h3><p>We have the curriculum, the community trust, the media partnership, and the demand. We need only institutional backing to go national.</p></div><a class="btn btn-crimson" href="#contact">Back the Movement ✦</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- ALIGNMENT -->
+<section id="alignment" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">11</span><span class="kick-line"></span><span data-scramble="NATIONAL & GLOBAL ALIGNMENT">NATIONAL &amp; GLOBAL ALIGNMENT</span></p>
+      <h2 class="lm"><span>Aligned with the goals that <em>matter.</em></span></h2>
+    </div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:#FF3A21">SDG 5</span><h3>Gender Equality</h3><p>Youth women’s economic empowerment, leadership development, and elimination of barriers to women’s participation.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:#A21C44">SDG 8</span><h3>Decent Work &amp; Economic Growth</h3><p>Youth employment, entrepreneurship, and skills development for productive work.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:#00689D">SDG 16</span><h3>Peace, Justice &amp; Strong Institutions</h3><p>Social cohesion, community unity, and inclusive institutions through youth women’s leadership.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:var(--maroon)">NDP</span><h3>Somalia NDP 2025–2029</h3><p>Inclusive growth, human capital development, and youth women’s economic participation.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:var(--crimson)">NGP</span><h3>Somalia National Gender Policy</h3><p>Youth women’s access to education, employment, and decision-making roles.</p></div>
+  </div>
+</section>
+
+<div class="ticker rev" aria-hidden="true">
+  <div class="ticker-track">
+    <span>&nbsp;PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU ✦ DHAQAN GOOB ✦ PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU ✦ DHAQAN GOOB ✦&nbsp;</span>
+    <span>&nbsp;PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU ✦ DHAQAN GOOB ✦ PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU ✦ DHAQAN GOOB ✦&nbsp;</span>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">12</span><span class="kick-line"></span><span data-scramble="CONTACT">CONTACT</span></p>
+      <h2 class="lm"><span>Let’s back the next <em>15,000.</em></span></h2>
+      <p class="lead rv" style="margin-top:18px">Funder, partner, media, or future participant — the Hub has a seat for you.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-item rv"><span class="cl">Phone</span><a href="tel:+252617835462">+252 61 783 5462</a></div>
+        <div class="c-item rv" style="--d:.06s"><span class="cl">Email</span><a href="mailto:hothanarts5@gmail.com">hothanarts5@gmail.com</a></div>
+        <div class="c-item rv" style="--d:.12s"><span class="cl">Head Office</span><span class="cv">Mogadishu · Benadir Region · Deyniile, Somalia</span></div>
+        <div class="c-item rv" style="--d:.18s"><span class="cl">Media</span><span class="cv">Astaan Media — National TV · Radio · Digital</span></div>
+        <div class="socials rv" style="--d:.24s"><span>Facebook</span><span>Instagram</span><span>Twitter</span></div>
+        <p class="legal rv" style="--d:.3s">Community-Based Organization (CBO) — registration in progress · Founded 2025</p>
+      </div>
+      <div>
+        <form id="contactForm" novalidate>
+          <div class="f-row">
+            <div><label for="fName">Your Name *</label><input id="fName" name="name" type="text" required placeholder="Amina Ali"></div>
+            <div><label for="fEmail">Email *</label><input id="fEmail" name="email" type="email" required placeholder="you@organization.org"></div>
+          </div>
+          <div class="f-row">
+            <div><label for="fOrg">Organization</label><input id="fOrg" name="org" type="text" placeholder="Foundation / Embassy / Media"></div>
+            <div><label for="fRole">I am a…</label>
+              <select id="fRole" name="role">
+                <option>Funder / Investor</option><option>Institutional Partner</option><option>Media</option><option>Volunteer / Trainer</option><option>Future Participant</option>
+              </select>
+            </div>
+          </div>
+          <div><label for="fMsg">Message *</label><textarea id="fMsg" name="message" required placeholder="Tell us how you’d like to build with us…"></textarea></div>
+          <button class="btn btn-amber" type="submit">Send Message ✦</button>
+        </form>
+        <div id="formSuccess" role="status">
+          <h3>Mahadsanid! ✦</h3>
+          <p>Thank you — your message has been received. Our team will respond within 48 hours. For urgent matters, call <b>+252 61 783 5462</b> or email <b>hothanarts5@gmail.com</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="cloth-band" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="star">✦</span> HOYGA HODAN</div>
+        <p>Youth Women Empowerment Through Creative Entrepreneurship. Culture, commerce &amp; confidence — from Mogadishu to every Federal Member State.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#who">Who We Are</a><a href="#story">Our Story</a><a href="#programs">Programs</a><a href="#impact">Impact</a>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <a href="#gallery">Gallery &amp; Films</a><a href="#team">Team</a><a href="#partners">Partners</a><a href="#roadmap">Roadmap</a>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <a href="tel:+252617835462">+252 61 783 5462</a>
+        <a href="mailto:hothanarts5@gmail.com">hothanarts5@gmail.com</a>
+        <p>Mogadishu Deyniile, Somalia<br>Media Partner: Astaan Media</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Hoyga Hodan · All rights reserved</span>
+      <span>Built with community trust ✦ Mogadishu</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-btn" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-btn" id="lbPrev" aria-label="Previous">←</button>
+  <img id="lbImg" src="" alt="Event photograph enlarged">
+  <button class="lb-btn" id="lbNext" aria-label="Next">→</button>
+  <p id="lbCap"></p>
+</div>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  window.addEventListener('load', function(){ document.body.classList.add('loaded'); });
+
+  var header = document.getElementById('topbar');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 30);
+  }, {passive:true});
+
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  navToggle.addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      document.body.classList.remove('menu-open');
+      navToggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* reveals */
+  var revealEls = document.querySelectorAll('.rv, .lm:not(.hero-lm)');
+  if(reduced || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('on'); });
+  } else {
+    var revealObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('on'); revealObs.unobserve(entry.target); }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ revealObs.observe(el); });
+  }
+
+  /* scramble labels */
+  var SCRAMBLE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ✦#*';
+  function scrambleEl(el){
+    var target = el.getAttribute('data-scramble');
+    if(reduced){ el.textContent = target; return; }
+    var startTime = null, duration = 850;
+    function frame(now){
+      if(startTime === null) startTime = now;
+      var progress = Math.min(1, (now - startTime) / duration);
+      var solved = Math.floor(progress * target.length);
+      var output = '';
+      for(var i = 0; i < target.length; i++){
+        var ch = target[i];
+        if(ch === ' ' || ch === '·' || ch === '&' || ch === ','){ output += ch; continue; }
+        output += (i < solved) ? ch : SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)];
+      }
+      el.textContent = output;
+      if(progress < 1){ requestAnimationFrame(frame); } else { el.textContent = target; }
+    }
+    requestAnimationFrame(frame);
+  }
+  var scrambleEls = document.querySelectorAll('[data-scramble]');
+  if(!reduced && 'IntersectionObserver' in window){
+    var scrambleObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ scrambleEl(entry.target); scrambleObs.unobserve(entry.target); }
+      });
+    }, {threshold:0.6});
+    scrambleEls.forEach(function(el){ scrambleObs.observe(el); });
+  }
+
+  /* counters */
+  function runCounter(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    if(reduced){ el.textContent = target + suffix; return; }
+    var startTime = null, duration = 1800;
+    function frame(now){
+      if(startTime === null) startTime = now;
+      var progress = Math.min(1, (now - startTime) / duration);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(target * eased) + suffix;
+      if(progress < 1){ requestAnimationFrame(frame); }
+    }
+    requestAnimationFrame(frame);
+  }
+  var counterEls = document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window){
+    var counterObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ runCounter(entry.target); counterObs.unobserve(entry.target); }
+      });
+    }, {threshold:0.6});
+    counterEls.forEach(function(el){ counterObs.observe(el); });
+  } else { counterEls.forEach(runCounter); }
+
+  /* scrollspy */
+  var spyLinks = document.querySelectorAll('.nav-links a[data-spy]');
+  var spyMap = [];
+  spyLinks.forEach(function(link){
+    var section = document.querySelector(link.getAttribute('href'));
+    if(section) spyMap.push({link: link, section: section});
+  });
+  window.addEventListener('scroll', function(){
+    var probe = window.scrollY + 160;
+    var current = null;
+    spyMap.forEach(function(item){ if(item.section.offsetTop <= probe) current = item; });
+    spyMap.forEach(function(item){ item.link.classList.toggle('active', item === current); });
+  }, {passive:true});
+
+  /* lightbox */
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCap = document.getElementById('lbCap');
+  var galleryItems = Array.prototype.slice.call(document.querySelectorAll('.g-item'));
+  var lbIndex = 0;
+  function lbShow(i){
+    lbIndex = (i + galleryItems.length) % galleryItems.length;
+    var img = galleryItems[lbIndex].querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = galleryItems[lbIndex].getAttribute('data-cap');
+  }
+  galleryItems.forEach(function(item, i){
+    item.addEventListener('click', function(){ lbShow(i); lightbox.classList.add('open'); document.body.style.overflow='hidden'; });
+  });
+  function lbClose(){ lightbox.classList.remove('open'); document.body.style.overflow=''; }
+  document.getElementById('lbClose').addEventListener('click', lbClose);
+  document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); lbShow(lbIndex - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); lbShow(lbIndex + 1); });
+  lightbox.addEventListener('click', function(e){ if(e.target === lightbox) lbClose(); });
+  document.addEventListener('keydown', function(e){
+    if(!lightbox.classList.contains('open')) return;
+    if(e.key === 'Escape') lbClose();
+    if(e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+    if(e.key === 'ArrowRight') lbShow(lbIndex + 1);
+  });
+
+  /* film loops + timecode */
+  document.querySelectorAll('[data-film]').forEach(function(film){
+    var tcEl = film.querySelector('.tc');
+    var btn = film.querySelector('.film-btn');
+    var playing = !reduced;
+    var elapsed = 0, last = performance.now();
+    film.classList.toggle('paused', !playing);
+    btn.textContent = playing ? '❚❚ Pause' : '► Play';
+    btn.addEventListener('click', function(){
+      playing = !playing;
+      last = performance.now();
+      film.classList.toggle('paused', !playing);
+      btn.textContent = playing ? '❚ Pause' : '► Play';
+    });
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function loop(now){
+      var dt = (now - last) / 1000; last = now;
+      if(playing) elapsed += dt;
+      var fr = Math.floor((elapsed % 1) * 24);
+      var ss = Math.floor(elapsed) % 60;
+      var mm = Math.floor(elapsed / 60) % 60;
+      tcEl.textContent = pad(mm) + ':' + pad(ss) + ':' + pad(fr);
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  });
+
+  /* contact form */
+  var contactForm = document.getElementById('contactForm');
+  var formSuccess = document.getElementById('formSuccess');
+  contactForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    if(!contactForm.checkValidity()){ contactForm.reportValidity(); return; }
+    contactForm.style.display = 'none';
+    formSuccess.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
