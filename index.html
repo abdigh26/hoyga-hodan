@@ -1113,14 +1113,38 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
     requestAnimationFrame(loop);
   });
 
-  /* contact form */
+  /* contact form — posts to Vercel serverless API (api/contact.js) */
   var contactForm = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
   contactForm.addEventListener('submit', function(event){
     event.preventDefault();
     if(!contactForm.checkValidity()){ contactForm.reportValidity(); return; }
-    contactForm.style.display = 'none';
-    formSuccess.classList.add('show');
+    var btn = contactForm.querySelector('button[type=submit]');
+    var origText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    var data = {
+      name: document.getElementById('fName').value.trim(),
+      email: document.getElementById('fEmail').value.trim(),
+      org: (document.getElementById('fOrg').value || '').trim(),
+      role: (document.getElementById('fRole').value || '').trim(),
+      message: document.getElementById('fMsg').value.trim()
+    };
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function(resp){
+      if(!resp.ok) throw new Error('submit failed');
+      return resp.json();
+    }).then(function(){
+      contactForm.style.display = 'none';
+      formSuccess.classList.add('show');
+    }).catch(function(){
+      btn.disabled = false;
+      btn.textContent = origText;
+      alert('Sorry — your message could not be sent. Please email hothanarts5@gmail.com or call +252 61 783 5462 instead.');
+    });
   });
 })();
 </script>

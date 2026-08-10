@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages · Hoyga Hodan Admin</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/900.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/outfit/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/outfit/600.css">
+<style>
+  :root{ --cream:#F7EEDF; --crimson:#A81C2A; --ink:#24090D; --card:#FFFBF2; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Outfit",system-ui,sans-serif;background:var(--cream);color:var(--ink);padding:48px clamp(20px,5vw,96px);line-height:1.6}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(30px,4vw,44px);letter-spacing:-.02em;margin-bottom:6px}
+  p.sub{color:var(--crimson);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:34px}
+  .mcard{background:var(--card);border:1.5px solid var(--ink);padding:22px 26px;margin-bottom:16px;box-shadow:6px 6px 0 var(--crimson)}
+  .mcard h3{font-family:"Fraunces",serif;font-size:20px;margin-bottom:4px}
+  .meta{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#8a6a55;margin-bottom:12px}
+  .mcard p.msg{font-weight:300;white-space:pre-wrap}
+  .empty{font-style:italic;color:#8a6a55}
+  a.home{display:inline-block;margin-top:34px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--ink);padding:12px 22px;color:var(--ink);text-decoration:none}
+  a.home:hover{background:var(--ink);color:var(--cream)}
+</style>
+</head>
+<body>
+<h1>Messages</h1>
+<p class="sub">Contact form submissions · stored on Vercel</p>
+<div id="list"></div>
+<a class="home" href="index.html">← Back to website</a>
+<script>
+  fetch('/api/contact?list=1')
+    .then(function(r){ return r.json(); })
+    .then(function(list){
+      var el = document.getElementById('list');
+      if(!list || !list.length){ el.innerHTML = '<p class="empty">No messages yet.</p>'; return; }
+      el.innerHTML = list.slice().reverse().map(function(m){
+        return '<div class="mcard"><h3>'+escapeHtml(m.name)+'</h3><div class="meta">'+escapeHtml(m.email)+(m.org?' · '+escapeHtml(m.org):'')+(m.role?' · '+escapeHtml(m.role):'')+' · '+new Date(m.receivedAt).toLocaleString()+'</div><p class="msg">'+escapeHtml(m.message)+'</p></div>';
+      }).join('');
+    })
+    .catch(function(){ document.getElementById('list').innerHTML='<p class="empty">Could not load messages.</p>'; });
+  function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+</script>
+</body>
+</html>
