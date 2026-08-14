@@ -1,13 +1,18 @@
-// Vercel Serverless Function — Contact form handler
-// Stores submissions in the project environment (email notification via
-// Resend is enabled only when RESEND_API_KEY + FROM_EMAIL env vars are set).
-// Submissions are always saved to a JSON file in .vercel/data (via the
-// kv-less approach below we use an in-memory log + optional email).
+// Vercel Serverless Function — Hoyga Hodan contact form
+//
+// Production notes:
+// - A Vercel function has no durable local filesystem. This handler uses /tmp only
+//   for a short-lived convenience cache; do not treat it as permanent storage.
+// - Configure RESEND_API_KEY, FROM_EMAIL and TO_EMAIL in Vercel to receive durable
+//   email notifications for every inquiry.
+// - Configure ADMIN_TOKEN to enable the protected message viewer at /admin.html.
 
 const fs = require("fs");
 const path = require("path");
 
-const DATA_DIR = path.join(process.cwd(), ".data");
+const DATA_DIR = process.env.VERCEL
+  ? path.join("/tmp", "hoyga-hodan")
+  : path.join(process.cwd(), ".data");
 const DATA_FILE = path.join(DATA_DIR, "messages.json");
 
 function readMessages() {
@@ -19,20 +24,46 @@ function readMessages() {
 }
 
 function saveMessages(list) {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(DATA_FILE, JSON.stringify(list, null, 2));
+  try {
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+    fs.writeFileSync(DATA_FILE, JSON.stringify(list, null, 2));
+  } catch (error) {
+    // Email delivery remains available even if the serverless cache cannot be written.
+    console.warn("Temporary contact cache could not be written:", error.message);
+  }
+}
+
+function escapeHtml(value) {
+  return String(value || "").replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;",
+  }[character]));
+}
+
+function hasAdminAccess(req) {
+  const token = process.env.ADMIN_TOKEN;
+  if (!token) return false;
+  const supplied = req.headers["x-admin-token"] || (req.query && req.query.token);
+  return supplied === token;
 }
 
 module.exports = async (req, res) => {
-  // Accept only same-origin / CORS-safe POST
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method not allowed" });
+  // The message viewer is deliberately protected. The old public GET route would
+  // otherwise expose contact submissions to anyone who knew the endpoint.
+  if (req.method === "GET" && req.query && req.query.list) {
+    if (!hasAdminAccess(req)) {
+      return res.status(401).json({ error: "Admin authorization required." });
+    }
+    res.setHeader("Cache-Control", "no-store");
+    return res.status(200).json(readMessages());
   }
 
-  // GET with ?list=1 returns all stored messages (admin.html)
-  if (req.method === "GET" && req.query && req.query.list) {
-    return res.status(200).json(readMessages());
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST, GET");
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
@@ -49,6 +80,9 @@ module.exports = async (req, res) => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return res.status(400).json({ error: "Invalid email address." });
     }
+    if (name.length > 120 || email.length > 254 || org.length > 160 || role.length > 120 || message.length > 5000) {
+      return res.status(400).json({ error: "Please shorten your message and try again." });
+    }
 
     const entry = {
       id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
@@ -64,23 +98,22 @@ module.exports = async (req, res) => {
     list.push(entry);
     saveMessages(list);
 
-    // Optional email notification via Resend (set env vars in Vercel dashboard)
     if (process.env.RESEND_API_KEY && process.env.FROM_EMAIL && process.env.TO_EMAIL) {
       try {
         const payload = {
           from: process.env.FROM_EMAIL,
           to: process.env.TO_EMAIL,
-          subject: `New Hoyga Hodan inquiry — ${name} (${role || "Unknown"})`,
+          subject: `New Hoyga Hodan inquiry — ${escapeHtml(name)} (${escapeHtml(role || "Unknown")})`,
           html: `
             <h2>New inquiry on hoygahodan.so</h2>
-            <p><b>Name:</b> ${name}<br>
-            <b>Email:</b> ${email}<br>
-            <b>Organization:</b> ${org || "—"}<br>
-            <b>I am a:</b> ${role || "—"}<br>
-            <b>Received:</b> ${entry.receivedAt}</p>
-            <hr><p>${message.replace(/\n/g, "<br>")}</p>`,
+            <p><b>Name:</b> ${escapeHtml(name)}<br>
+            <b>Email:</b> ${escapeHtml(email)}<br>
+            <b>Organization:</b> ${escapeHtml(org || "—")}<br>
+            <b>I am a:</b> ${escapeHtml(role || "—")}<br>
+            <b>Received:</b> ${escapeHtml(entry.receivedAt)}</p>
+            <hr><p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>`,
         };
-        const resp = await fetch("https://api.resend.com/emails", {
+        const response = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
@@ -88,17 +121,15 @@ module.exports = async (req, res) => {
           },
           body: JSON.stringify(payload),
         });
-        if (!resp.ok) {
-          console.warn("Resend notification failed:", resp.status);
-        }
-      } catch (e) {
-        console.warn("Resend error:", e);
+        if (!response.ok) console.warn("Resend notification failed:", response.status);
+      } catch (error) {
+        console.warn("Resend error:", error.message);
       }
     }
 
     return res.status(200).json({ ok: true, id: entry.id });
-  } catch (e) {
-    console.error("Contact handler error:", e);
+  } catch (error) {
+    console.error("Contact handler error:", error);
     return res.status(500).json({ error: "Something went wrong. Please try again." });
   }
 };

@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hoyga Hodan — Youth Women Empowerment Through Creative Entrepreneurship</title>
-<meta name="description" content="Hoyga Hodan (“Hodan’s Hub”) empowers youth women in Somalia through creative entrepreneurship, skills training, and community-driven economic development. Founded 2025 · Mogadishu.">
+<title>Hoyga Hodan | Somali Women Learn, Connect, Create & Thrive</title>
+<meta name="description" content="Hoyga Hodan brings Somali women together through practical learning, entrepreneurship, culture, creativity, community activities, networking and mentorship.">
+<meta name="theme-color" content="#A81C2A">
+<link rel="canonical" href="https://www.hoygahodan.so/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hoyga Hodan">
+<meta property="og:title" content="Hoyga Hodan | Somali Women Learn, Connect, Create & Thrive">
+<meta property="og:description" content="A space where Somali women learn, connect, create and thrive through practical learning, community, culture and opportunity.">
+<meta property="og:url" content="https://www.hoygahodan.so/">
+<meta property="og:image" content="https://www.hoygahodan.so/assets/images/IMG-20260802-WA0111.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hoyga Hodan | Somali Women Learn, Connect, Create & Thrive">
+<meta name="twitter:description" content="Practical learning, community, culture, creativity and opportunity for Somali women.">
+<meta name="twitter:image" content="https://www.hoygahodan.so/assets/images/IMG-20260802-WA0111.jpg">
 <link rel="icon" type="image/png" href="assets/images/favicon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces/600.css">
@@ -359,6 +371,40 @@ blockquote cite{display:block;margin-top:16px;padding-left:56px;font-style:norma
 .sdg-row h3{font-size:clamp(18px,1.7vw,22px)}
 .sdg-row p{font-weight:300;font-size:14.5px}
 
+/* accessibility + factual-content modules */
+.skip-link{position:fixed;left:16px;top:14px;z-index:5000;background:var(--ink);color:var(--cream);padding:10px 14px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transform:translateY(-160%);transition:transform .2s}
+.skip-link:focus{transform:none;outline:3px solid var(--amber);outline-offset:3px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.stats{grid-template-columns:repeat(3,1fr)}
+.stat-note{display:block;margin-top:7px;color:rgba(243,227,208,.5);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+#experience{background:var(--cream2)}
+.experience-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,74px);align-items:end;margin-bottom:42px}
+.experience-intro p{font-size:clamp(16px,1.45vw,19px);font-weight:300}
+.experience-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:clamp(44px,6vw,72px)}
+.x-card{grid-column:span 2;border:1.5px solid var(--ink);background:var(--card);padding:24px 20px;min-height:190px;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.x-card:hover{transform:translateY(-7px);box-shadow:8px 8px 0 var(--xc,var(--crimson))}
+.x-card:nth-child(4),.x-card:nth-child(5),.x-card:nth-child(6){grid-column:span 2}
+.x-no{font-family:var(--disp);font-weight:900;font-size:38px;line-height:1;color:var(--xc,var(--crimson));display:block;margin-bottom:14px}
+.x-card h3{font-size:clamp(21px,2vw,27px);margin-bottom:8px}.x-card p{font-size:14px;font-weight:300}
+.x-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:var(--xc,var(--crimson))}
+.journey{background:var(--deep);color:var(--cream);border:1.5px solid var(--ink);padding:clamp(26px,4vw,50px)}
+.journey .kick{color:var(--amber)}
+.journey-track{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding:8px 0 4px}
+.journey-step{min-width:142px;flex:1;padding:14px 18px;border-left:1px solid var(--line-l);position:relative}
+.journey-step:first-child{border-left:none}.journey-step span{display:block;font-family:var(--disp);font-weight:900;font-size:20px;color:var(--amber);margin-bottom:7px}.journey-step p{font-size:12.5px;font-weight:300;color:rgba(243,227,208,.82)}
+.journey-step:not(:last-child)::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:1;width:18px;height:18px;display:grid;place-items:center;background:var(--deep);color:var(--amber);font-size:16px}
+.events-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.event-card{border:1.5px solid var(--ink);background:var(--card);padding:24px 20px;display:flex;flex-direction:column;min-height:290px;transition:transform .35s,box-shadow .35s}
+.event-card:hover{transform:translateY(-7px);box-shadow:8px 8px 0 var(--crimson)}
+.event-card .eyebrow{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--orange);margin-bottom:15px}.event-card h3{font-size:clamp(21px,2vw,27px);margin-bottom:8px}.event-card .event-place{font-family:var(--disp);font-style:italic;font-weight:600;color:var(--ink2);margin-bottom:16px}.event-card p{font-size:14px;font-weight:300;margin-top:auto}.event-count{font-family:var(--disp);font-weight:900;font-size:34px;color:var(--crimson);line-height:1;display:block;margin-bottom:7px}.event-note{margin-top:25px;border-left:6px solid var(--amber);background:var(--cream2);padding:22px 24px;font-size:15px;font-weight:300}
+.story-stage{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(26px,5vw,72px);align-items:stretch;margin-top:clamp(40px,5vw,68px)}
+.story-stage figure{border:1.5px solid var(--ink);background:var(--card)}.story-stage figure img{width:100%;height:100%;min-height:320px;object-fit:cover}.story-stage figcaption{border-top:1.5px solid var(--ink);padding:11px 14px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}.story-copy{background:var(--deep);color:var(--cream);padding:clamp(28px,4vw,50px);border:1.5px solid var(--ink)}.story-copy h3{font-size:clamp(28px,3vw,42px);margin-bottom:16px;color:var(--amber)}.story-copy p{font-size:16px;font-weight:300;margin-bottom:17px}.story-slot{margin-top:26px;border:1px dashed rgba(243,227,208,.5);padding:16px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,227,208,.7)}
+.support-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}.support-card{border:1.5px solid var(--ink);background:var(--card);padding:26px 22px;position:relative;min-height:230px;overflow:hidden;transition:transform .35s,box-shadow .35s}.support-card:hover{transform:translateY(-7px);box-shadow:8px 8px 0 var(--amber)}.support-card .support-ix{font-family:var(--disp);font-weight:900;font-size:44px;color:var(--crimson);display:block;margin-bottom:12px}.support-card h3{font-size:clamp(20px,1.8vw,25px);margin-bottom:9px}.support-card p{font-size:14px;font-weight:300}.funding-note{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,5vw,66px);margin-top:clamp(38px,5vw,64px);padding-top:clamp(30px,4vw,48px);border-top:1.5px solid var(--ink)}.funding-note h3{font-size:clamp(26px,3vw,38px)}.funding-note p{font-size:15.5px;font-weight:300}.funding-note .tags{margin-top:18px}
+.measure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.measure-card{border:1.5px solid var(--ink);background:var(--card);padding:24px 20px;position:relative}.measure-card h3{font-size:21px;margin-bottom:8px}.measure-card p{font-size:14px;font-weight:300}.measure-card span{display:block;color:var(--crimson);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.planning-label{display:inline-block;background:var(--amber);color:var(--ink);padding:6px 10px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:14px 0 0}
+@media(max-width:1080px){.experience-grid,.events-grid,.support-grid{grid-template-columns:repeat(2,1fr)}.x-card,.x-card:nth-child(n){grid-column:span 1}.events-grid .event-card,.support-grid .support-card{grid-column:auto}.story-stage,.experience-intro,.funding-note{grid-template-columns:1fr}.measure-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.stats{grid-template-columns:1fr}.experience-grid,.events-grid,.support-grid,.measure-grid{grid-template-columns:1fr}.journey-step{min-width:128px}.journey-step:not(:last-child)::after{display:none}.story-stage figure img{min-height:240px}}
+
 /* contact */
 #contact{background:var(--deep);color:#F3E3D0;overflow:hidden}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px)}
@@ -437,35 +483,45 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 }
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}.lm>span{transform:none!important}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hoyga Hodan",
+  "url": "https://www.hoygahodan.so/",
+  "description": "A Somali women-led space for practical learning, community, culture, creativity and opportunity.",
+  "areaServed": "Somalia"
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to main content</a>
 <div class="noise" aria-hidden="true"></div>
 
 <header id="topbar">
   <div class="wrap nav-inner">
     <a class="logo" href="#top"><img class="logo-full" src="assets/images/logo-full.png" alt="Hoyga Hodan"></a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#who" data-spy>Who We Are</a>
-      <a href="#story" data-spy>Story</a>
-      <a href="#programs" data-spy>Programs</a>
+      <a href="#who" data-spy>About</a>
+      <a href="#programs" data-spy>Programmes</a>
+      <a href="#events" data-spy>Events</a>
+      <a href="#stories" data-spy>Stories</a>
       <a href="#impact" data-spy>Impact</a>
-      <a href="#gallery" data-spy>Gallery</a>
-      <a href="#team" data-spy>Team</a>
-      <a href="#roadmap" data-spy>Roadmap</a>
+      <a href="#partners" data-spy>Partners</a>
     </nav>
-    <a class="nav-cta" href="#contact">Partner With Us</a>
-    <button id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+    <a class="nav-cta" href="#events">Join an Event</a>
+    <button id="navToggle" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
 <nav id="mobileMenu" aria-label="Mobile">
-  <a href="#who">Who We Are</a>
-  <a href="#story">Our Story</a>
-  <a href="#programs">Programs</a>
+  <a href="#who">About</a>
+  <a href="#programs">Programmes</a>
+  <a href="#events">Events</a>
+  <a href="#stories">Stories</a>
   <a href="#impact">Impact</a>
-  <a href="#gallery">Gallery &amp; Films</a>
-  <a href="#team">Team</a>
-  <a href="#roadmap">Roadmap</a>
-  <a href="#contact">Partner With Us</a>
+  <a href="#partners">Partners</a>
+  <a href="#contact">Contact</a>
+  <a href="#support">Support Hoyga Hodan</a>
 </nav>
 
 <main id="top">
@@ -474,38 +530,38 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
   <div class="ghost-word" aria-hidden="true">HODAN</div>
   <div class="wrap hero-grid">
     <div>
-      <p class="kick rv"><span class="kick-num">EST.</span><span class="kick-line"></span><span data-scramble="FOUNDED 2025 · MOGADISHU, SOMALIA">FOUNDED 2025 · MOGADISHU, SOMALIA</span></p>
+      <p class="kick rv"><span class="kick-num">HOYGA</span><span class="kick-line"></span><span data-scramble="MOGADISHU · SOMALIA">MOGADISHU · SOMALIA</span></p>
       <h1 class="hero-title">
-        <span class="lm hero-lm"><span style="--d:.05s">Hoyga</span></span>
-        <span class="lm hero-lm row2"><span style="--d:.18s">Hodan<span class="star">✦</span></span></span>
+        <span class="lm hero-lm"><span style="--d:.05s">A space where Somali women</span></span>
+        <span class="lm hero-lm row2"><span style="--d:.18s">learn, connect, <em>create &amp; thrive.</em><span class="star">✦</span></span></span>
       </h1>
-      <p class="hero-tag lm hero-lm"><span style="--d:.3s">“Hodan’s Hub” — youth women empowerment through creative entrepreneurship.</span></p>
-      <p class="hero-copy rv" style="--d:.4s">We create safe, affordable spaces where young Somali women learn, connect, and launch businesses — wrapping rigorous skills training in culture, commerce, and confidence.</p>
+      <p class="hero-tag lm hero-lm"><span style="--d:.3s">Hoyga Hodan — practical learning, community, culture and opportunity.</span></p>
+      <p class="hero-copy rv" style="--d:.4s">Hoyga Hodan brings Somali women together through practical skills and entrepreneurship training, community activities, cultural experiences, networking and mentorship — creating a space where learning becomes connection, confidence and opportunity.</p>
       <div class="hero-btns rv" style="--d:.5s">
-        <a class="btn btn-crimson" href="#contact">Partner With Us</a>
-        <a class="btn" href="#gallery">See the Events ↓</a>
+        <a class="btn btn-crimson" href="#events">Join an Event</a>
+        <a class="btn" href="#support">Support Hoyga Hodan ↓</a>
       </div>
       <div class="hero-chips rv" style="--d:.6s">
-        <span><b>4</b> Events Delivered</span>
-        <span><b>600+</b> Women Trained</span>
-        <span><b>$5</b> Ticket Model</span>
+        <span><b>4+</b> Events Delivered</span>
+        <span><b>~600</b> Women Reached</span>
+        <span><b>$10</b> Participant Contribution</span>
       </div>
       <div class="scroll-cue rv" style="--d:.7s"><i></i>Scroll the story</div>
     </div>
     <div class="hero-collage">
       <figure class="pc pc1">
         <div class="ph kb"><img src="assets/images/IMG-20260802-WA0111.jpg" alt="Women cutting a celebration cake at the Hoyga Hodan Baraawe launch"></div>
-        <figcaption><span>Baraawe Launch</span><span>Chapter 02</span></figcaption>
+        <figcaption><span>Baraawe Gathering</span><span>South West State</span></figcaption>
       </figure>
       <figure class="pc pc2">
         <div class="ph kb"><img src="assets/images/IMG-20260802-WA0114.jpg" alt="Large gathering of women in colorful traditional dress at a Hoyga Hodan event"></div>
-        <figcaption><span>The Gathering</span><span>Edition 04</span></figcaption>
+        <figcaption><span>Women Together</span><span>Community Gathering</span></figcaption>
       </figure>
       <figure class="pc pc3">
         <div class="ph kb"><img src="assets/images/IMG-20260802-WA0010.jpg" alt="Young women in maroon striped garb sitting in a circle at an event"></div>
         <figcaption><span>The Circle</span><span>Networking</span></figcaption>
       </figure>
-      <div class="ticket">★ $5 Ticket<small>Community Owned</small></div>
+      <div class="ticket">★ $10 Contribution<small>Community Supported</small></div>
       <svg class="stamp" viewBox="0 0 128 128" aria-hidden="true">
         <defs><path id="cirPath" d="M64,64 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs>
         <text><textPath href="#cirPath">HOYGA HODAN ✦ EST. 2025 ✦ MOGADISHU ✦ </textPath></text>
@@ -517,8 +573,8 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>&nbsp;HAL-ABUUR ✦ DHAQAN GOOB ✦ BARAANBUR ✦ DHAANTO ✦ SKILLS ✦ MENTORSHIP ✦ MARKET ACCESS  CULTURE ✦ COMMERCE ✦ CONFIDENCE ✦ MOGADISHU ✦&nbsp;</span>
-    <span>&nbsp;HAL-ABUUR ✦ DHAQAN GOOB ✦ BARAANBUR ✦ DHAANTO ✦ SKILLS ✦ MENTORSHIP ✦ MARKET ACCESS  CULTURE ✦ COMMERCE ✦ CONFIDENCE ✦ MOGADISHU ✦&nbsp;</span>
+    <span>&nbsp;LEARN ✦ CONNECT ✦ CREATE ✦ PLAY ✦ CELEBRATE ✦ CONTINUE ✦ SKILLS ✦ COMMUNITY ✦ CULTURE ✦ OPPORTUNITY ✦&nbsp;</span>
+    <span>&nbsp;LEARN ✦ CONNECT ✦ CREATE ✦ PLAY ✦ CELEBRATE ✦ CONTINUE ✦ SKILLS ✦ COMMUNITY ✦ CULTURE ✦ OPPORTUNITY ✦&nbsp;</span>
   </div>
 </div>
 
@@ -533,12 +589,12 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       </div>
     </div>
     <div class="who-body">
-      <p class="rv">Hoyga Hodan (“Hodan’s Hub”) is a grassroots community-based organization founded in 2025 and dedicated to empowering youth women in Somalia through <b>creative entrepreneurship, skills training, and community-driven economic development</b>.</p>
-      <p class="rv" style="--d:.1s">Founded and led by Somali women, we operate at the intersection of culture, commerce, and confidence-building — creating safe, affordable spaces where young women learn, connect, and launch businesses.</p>
-      <p class="rv" style="--d:.2s">We believe that economic empowerment is not just about skills — it is about <b>belonging, visibility, and joy</b>. Every Hoyga Hodan event combines rigorous training with cultural celebration, mentorship with market access, and individual growth with community solidarity.</p>
+      <p class="rv">Hoyga Hodan is a Somali women-led space where women come together to <b>learn, connect, create and thrive</b>. We combine practical skills and entrepreneurship learning with community, culture, creativity and opportunities to build relationships.</p>
+      <p class="rv" style="--d:.1s">The experience is designed around what participants value: a welcoming place to meet new people, exchange ideas, explore creativity, take part in cultural activities and leave with greater confidence.</p>
+      <p class="rv" style="--d:.2s">Each gathering combines practical learning with <b>structured community and cultural activities</b> that encourage participation, connection and belonging. Traditional games, competitions, art, music, karaoke, networking and social connection are part of the model—not an afterthought.</p>
       <blockquote class="rv" style="--d:.25s">
-        <p>Our goal is to create a sustainable ecosystem where youth women and businesses thrive together, strengthening the fabric of the Mogadishu community and beyond.</p>
-        <cite>— Hoyga Hodan Founding Vision</cite>
+        <p>When women have room to learn, share, enjoy, and be seen, they build confidence and relationships that can open the door to future opportunity.</p>
+        <cite>— The Hoyga Hodan approach</cite>
       </blockquote>
     </div>
   </div>
@@ -551,19 +607,18 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
   <div class="wrap story-grid">
     <div class="story-sticky">
       <p class="kick rv"><span class="kick-num">02</span><span class="kick-line"></span><span data-scramble="OUR STORY">OUR STORY</span></p>
-      <h2 class="lm"><span>From one $5 ticket to a <em>movement.</em></span></h2>
-      <p class="lead rv" style="margin-top:20px">Hoyga Hodan began as a simple idea: <em>what if Somali youth women had a space that was theirs — affordable, creative, and built for their realities?</em></p>
+      <h2 class="lm"><span>Four gatherings made one thing <em>clear.</em></span></h2>
+      <p class="lead rv" style="margin-top:20px">Somali women want spaces that make it possible to learn, meet, create, celebrate and return.</p>
       <figure class="story-img rv" style="--d:.15s">
-        <div class="ph kb"><img src="assets/images/IMG-20260802-WA0058.jpg" alt="Vendor’s hands with gold bangles holding a woven basket of tomatoes"></div>
-        <figcaption>Vendor Showcase · Market Expo</figcaption>
+        <div class="ph kb"><img src="assets/images/IMG-20260802-WA0058.jpg" alt="Vendor’s hands holding a woven basket of tomatoes at a Hoyga Hodan gathering"></div>
+        <figcaption>Community exchange · local enterprise</figcaption>
       </figure>
     </div>
     <div class="tl">
-      <article class="tl-item rv"><span class="tl-year">2025 · THE IDEA</span><h3>A space that was theirs</h3><p>Founder Hodan Abdullaahi Mohamed launched the first Hoyga Hodan event in Mogadishu with community trust, local partnerships, and a $5 ticket model.</p></article>
-      <article class="tl-item rv" style="--d:.08s"><span class="tl-year">EVENT 01 · 150 WOMEN</span><h3>They left with confidence</h3><p>That first event brought together 150 young women. They painted calabashes, shared business ideas, danced Baraanbur, and left with something rare: confidence.</p></article>
-      <article class="tl-item rv" style="--d:.12s"><span class="tl-year">THE SPARK</span><h3>Word spread. Media followed.</h3><p>Social media exploded. Local TV covered it. The demand for this kind of space was not just real — it was urgent.</p></article>
-      <article class="tl-item rv" style="--d:.16s"><span class="tl-year">EDITIONS 02–04</span><h3>Each larger, each deeper</h3><p>Three more editions followed — including the Baraawe chapter launch and the Dhaqan Goob cultural corner — each proving the model.</p></article>
-      <article class="tl-item rv" style="--d:.2s"><span class="tl-year">TODAY · 2026</span><h3>Ready to scale</h3><p>We have proven the model. We have the community. We have the media partnership. What we need now is institutional backing to take this national.</p></article>
+      <article class="tl-item rv"><span class="tl-year">A COMMUNITY-LED START</span><h3>Built from many kinds of support</h3><p>The first gatherings were made possible through $10 participant contributions, local businesses, donated services, free food and water, volunteers, discounted or free media, occasional financial support, and determined founder and team effort.</p></article>
+      <article class="tl-item rv" style="--d:.08s"><span class="tl-year">FOUR GATHERINGS</span><h3>Approximately 600 women reached</h3><p>Across Eco Hub, Muniiza Hall, Dhaqan Gooob and Baraawe, Hoyga Hodan reconstructed participation at approximately 600 women—422 paid participants and 178 free participants.</p></article>
+      <article class="tl-item rv" style="--d:.12s"><span class="tl-year">BARAAWE</span><h3>A signal of participant demand</h3><p>The Baraawe gathering created strong happiness and connection among women participants, who expressed interest in more gatherings. It remains an important example of why the model should continue and grow carefully.</p></article>
+      <article class="tl-item rv" style="--d:.16s"><span class="tl-year">NEXT STAGE</span><h3>From unpredictable support to strategic partnership</h3><p>Community support proved there is demand. Hoyga Hodan is now seeking more predictable institutional and strategic partnerships so future gatherings can be planned, delivered and measured with care.</p></article>
     </div>
   </div>
 </section>
@@ -579,8 +634,8 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       <article class="p-card">
         <div>
           <div class="p-num">01</div>
-          <h3>Skills Training &amp; Workshops</h3>
-          <p>The backbone of Hoyga Hodan is hands-on, market-relevant training delivered by local experts. Our half-day workshops cover:</p>
+          <h3>Practical Learning</h3>
+          <p>Hoyga Hodan creates accessible, hands-on learning spaces where women can explore useful skills, entrepreneurship and creative practice alongside peers and local facilitators. Topics can include:</p>
           <div class="tags">
             <span>Business Planning</span><span>AI &amp; Digital Innovation</span><span>Content Creation</span>
             <span>Financial Literacy</span><span>Leadership &amp; Public Speaking</span><span>Creative Crafts</span>
@@ -591,17 +646,17 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       <article class="p-card">
         <div>
           <div class="p-num">02</div>
-          <h3>Hoyga Hodan Events</h3>
-          <p>Our signature multi-day events combine training with celebration. Each event includes:</p>
+          <h3>Gatherings That Build Belonging</h3>
+          <p>Each Hoyga Hodan gathering combines practical learning with structured community and cultural activities that encourage participation, confidence, connection and belonging. Depending on the gathering, the experience can include:</p>
           <ul class="evlist">
-            <li>Inspirational talks by successful women entrepreneurs</li>
-            <li>Success story sessions where participants share journeys</li>
-            <li>Business exhibitions with vendor stalls</li>
-            <li>Panel discussions on women’s economic participation</li>
-            <li>Networking with mentors and buyers</li>
-            <li>Creative &amp; cultural performances — Baraanbur, Dhaanto, poetry</li>
-            <li>Awards &amp; recognition for outstanding participants</li>
-            <li>Media interviews and photography coverage</li>
+            <li>Skills and entrepreneurship sessions</li>
+            <li>Networking, introductions and friendships</li>
+            <li>Art, creativity and maker activities</li>
+            <li>Traditional games and friendly competitions</li>
+            <li>Music, karaoke and cultural experiences</li>
+            <li>Peer sharing and community conversation</li>
+            <li>Visibility for local products and ideas</li>
+            <li>Photography and media moments where appropriate</li>
           </ul>
         </div>
         <figure class="p-img"><div class="ph"><img src="assets/images/IMG-20260802-WA0008.jpg" alt="Dhaqan Goob cultural corner under a striped canopy"></div><figcaption>Dhaqan Goob · cultural corner</figcaption></figure>
@@ -609,21 +664,54 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       <article class="p-card">
         <div>
           <div class="p-num">03</div>
-          <h3>Mentorship &amp; Market Linkages</h3>
-          <p>Training without follow-up is wasted. We match participants with local business leaders for ongoing mentorship, and we organize <b>quarterly market expos</b> that connect entrepreneurs directly with buyers, investors, and government procurement officers.</p>
-          <div class="tags"><span>Mentor Matching</span><span>Quarterly Market Expos</span><span>Buyers &amp; Investors</span><span>Procurement Access</span></div>
+          <h3>Connection &amp; Future Opportunity</h3>
+          <p>Learning is stronger when women can keep building relationships after a gathering. Hoyga Hodan creates room for peer networks, mentor introductions and connections to future opportunities as local partners and resources allow.</p>
+          <div class="tags"><span>Peer Networks</span><span>Mentor Introductions</span><span>Local Connections</span><span>Future Opportunities</span></div>
         </div>
         <figure class="p-img"><div class="ph"><img src="assets/images/IMG-20260802-WA0106.jpg" alt="Woven baskets of grains, fruits and produce at a market expo"></div><figcaption>Direct to market</figcaption></figure>
       </article>
       <article class="p-card">
         <div>
           <div class="p-num">04</div>
-          <h3>Digital Platform</h3>
-          <p>We are building an online learning portal to reach youth women in rural areas and the diaspora — extending the Hub far beyond Mogadishu.</p>
-          <div class="tags"><span>Somali-Language Training Videos</span><span>Mentor Matching System</span><span>Business Directory</span><span>Digital Certificates</span></div>
+          <h3>Continuity Beyond the Gathering</h3>
+          <p>As Hoyga Hodan grows, the team plans to strengthen follow-up, participant communication and accessible learning resources—so women can stay connected to ideas, people and future opportunities after an event.</p>
+          <div class="tags"><span>Participant Follow-Up</span><span>Learning Resources</span><span>Community Updates</span><span>Future Access</span></div>
         </div>
         <figure class="p-img"><div class="ph"><img src="assets/images/IMG-20260802-WA0006.jpg" alt="Mogadishu coastline at golden hour"></div><figcaption>Reaching rural &amp; diaspora</figcaption></figure>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="sec">
+  <div class="wrap">
+    <div class="experience-intro">
+      <div>
+        <p class="kick rv"><span class="kick-num">04</span><span class="kick-line"></span><span data-scramble="MORE THAN A TRAINING">MORE THAN A TRAINING</span></p>
+        <h2 class="lm"><span>A gathering women want to <em>return to.</em></span></h2>
+      </div>
+      <p class="rv">Hoyga Hodan’s distinctive model brings practical learning into a warm, active social space. Community and cultural activities are designed to encourage participation, confidence, connection and belonging—not simply to entertain.</p>
+    </div>
+    <div class="experience-grid">
+      <article class="x-card rv" style="--xc:var(--crimson)"><span class="x-no">01</span><h3>Learn</h3><p>Practical skills, entrepreneurship and shared ideas.</p></article>
+      <article class="x-card rv" style="--xc:var(--orange);--d:.05s"><span class="x-no">02</span><h3>Connect</h3><p>Networking, introductions, friendships and peer support.</p></article>
+      <article class="x-card rv" style="--xc:var(--amber);--d:.1s"><span class="x-no">03</span><h3>Create</h3><p>Art, maker activities and room for self-expression.</p></article>
+      <article class="x-card rv" style="--xc:var(--maroon)"><span class="x-no">04</span><h3>Play</h3><p>Traditional games and friendly competitions that invite everyone in.</p></article>
+      <article class="x-card rv" style="--xc:var(--crimson);--d:.05s"><span class="x-no">05</span><h3>Celebrate</h3><p>Music, karaoke and cultural activities that strengthen shared joy.</p></article>
+      <article class="x-card rv" style="--xc:var(--orange);--d:.1s"><span class="x-no">06</span><h3>Continue</h3><p>Relationships, mentoring connections and future opportunities where available.</p></article>
+    </div>
+    <div class="journey rv">
+      <p class="kick"><span class="kick-line"></span><span>THE PROGRAMME EXPERIENCE</span></p>
+      <div class="journey-track" aria-label="Hoyga Hodan participant journey">
+        <div class="journey-step"><span>Learn</span><p>Explore practical skills and ideas.</p></div>
+        <div class="journey-step"><span>Connect</span><p>Meet peers and build relationships.</p></div>
+        <div class="journey-step"><span>Play</span><p>Take part with confidence and joy.</p></div>
+        <div class="journey-step"><span>Create</span><p>Make, share and be visible.</p></div>
+        <div class="journey-step"><span>Build Confidence</span><p>Feel more able to participate and lead.</p></div>
+        <div class="journey-step"><span>Build Community</span><p>Leave with relationships that continue.</p></div>
+        <div class="journey-step"><span>Access Opportunity</span><p>Stay connected to future pathways as available.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -632,31 +720,52 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 <section id="impact" class="sec dark">
   <div class="wrap">
     <div class="sec-head">
-      <p class="kick rv"><span class="kick-num">04</span><span class="kick-line"></span><span data-scramble="TRACK RECORD">TRACK RECORD</span></p>
-      <h2 class="lm"><span>Proof, not <em>promises.</em></span></h2>
+      <p class="kick rv"><span class="kick-num">05</span><span class="kick-line"></span><span data-scramble="HISTORICAL TRACK RECORD">HISTORICAL TRACK RECORD</span></p>
+      <h2 class="lm"><span>Demand we can <em>see.</em></span></h2>
+      <p class="lead rv" style="margin-top:16px">These reconstructed figures describe the first four gatherings. They are historical participation figures, not audited impact results.</p>
     </div>
     <div class="stats rv">
-      <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Events Delivered</span></div>
-      <div class="stat"><span class="stat-num" data-count="600" data-suffix="+">0</span><span class="stat-label">Youth Women Trained</span></div>
-      <div class="stat"><span class="stat-num" data-count="90" data-suffix="%">0</span><span class="stat-label">Ticket Sales Rate</span></div>
-      <div class="stat"><span class="stat-num" data-count="20" data-suffix="+">0</span><span class="stat-label">Local Businesses Exhibited</span></div>
+      <div class="stat"><span class="stat-num" data-count="4" data-suffix="+">0</span><span class="stat-label">Events Delivered</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num">~600</span><span class="stat-label">Women Reached</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num" data-count="422">0</span><span class="stat-label">Paid Participants</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num" data-count="178">0</span><span class="stat-label">Free Participants</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num" data-count="9">0</span><span class="stat-label">Planned Events</span><small class="stat-note">Next 12 months</small></div>
+      <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Planned Cities</span><small class="stat-note">Next 12 months</small></div>
     </div>
     <div class="impact-grid">
       <div>
-        <p class="kick rv" style="margin-bottom:24px"><span class="kick-line"></span><span data-scramble="IMPACT HIGHLIGHTS">IMPACT HIGHLIGHTS</span></p>
+        <p class="kick rv" style="margin-bottom:24px"><span class="kick-line"></span><span data-scramble="WHAT THE FIRST FOUR SHOW">WHAT THE FIRST FOUR SHOW</span></p>
         <ul class="hl">
-          <li class="rv">All participants are youth women (ages 18–35).</li>
-          <li class="rv" style="--d:.06s">Events trended on social media across Somalia and the diaspora.</li>
-          <li class="rv" style="--d:.12s">Featured on local television and by social media influencers.</li>
-          <li class="rv" style="--d:.18s">The $5 ticket model proves financial sustainability and community ownership.</li>
-          <li class="rv" style="--d:.24s">Multiple participants launched businesses after attending Hoyga Hodan.</li>
+          <li class="rv">Women have joined for practical learning, social connection, creativity and cultural activity in the same welcoming space.</li>
+          <li class="rv" style="--d:.06s">The $10 participant contribution has been one part of a wider community-supported model, alongside local partners, volunteers and in-kind support.</li>
+          <li class="rv" style="--d:.12s">Participant interest in repeat gatherings and new cities is an important sign of demand—especially in Baraawe.</li>
+          <li class="rv" style="--d:.18s">The next stage is to deliver planned gatherings with more predictable support and better learning from participant feedback.</li>
         </ul>
       </div>
       <aside class="cost-card rv" style="--d:.15s">
-        <span class="big">≈ $30</span>
-        <p><b>per participant trained.</b> Hoyga Hodan delivers exceptional value compared to traditional vocational training programs — low cost, high impact.</p>
+        <span class="big">9</span>
+        <p><b>planned gatherings over 12 months.</b> The working plan covers Mogadishu, Baidoa, Garoowe and Hargeisa, with approximately 100–150 participant places at each gathering.</p>
+        <span class="planning-label">Approx. 1,125 planned participant places · not guaranteed beneficiaries</span>
       </aside>
     </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">06</span><span class="kick-line"></span><span data-scramble="PAST GATHERINGS">PAST GATHERINGS</span></p>
+      <h2 class="lm"><span>Four events. One growing <em>community.</em></span></h2>
+      <p class="lead rv" style="margin-top:16px">These are approximate reconstructed participation figures from Hoyga Hodan’s first four gatherings. Explore the gallery below for moments from the community.</p>
+    </div>
+    <div class="events-grid">
+      <article class="event-card rv"><span class="eyebrow">Past gathering · Mogadishu</span><h3>Eco Hub</h3><span class="event-place">Mogadishu</span><span class="event-count">~100</span><p>participants · 59 paid · 41 free</p></article>
+      <article class="event-card rv" style="--d:.06s"><span class="eyebrow">Past gathering · Mogadishu</span><h3>Muniiza Hall</h3><span class="event-place">Mogadishu</span><span class="event-count">~150</span><p>participants · 92 paid · 58 free</p></article>
+      <article class="event-card rv" style="--d:.12s"><span class="eyebrow">Past gathering · Mogadishu</span><h3>Dhaqan Gooob</h3><span class="event-place">Mogadishu</span><span class="event-count">200</span><p>participants · 140 paid · 60 free</p></article>
+      <article class="event-card rv" style="--d:.18s"><span class="eyebrow">Past gathering · South West State</span><h3>Baraawe</h3><span class="event-place">Lower Shabelle</span><span class="event-count">150</span><p>participants · 131 paid · 19 free</p></article>
+    </div>
+    <div class="event-note rv"><b>Looking ahead.</b> Hoyga Hodan is planning future gatherings and will share confirmed dates and registration details through its official channels. To express interest in a future event or partnership, <a href="#contact"><b>contact the team</b></a>.</div>
   </div>
 </section>
 
@@ -664,18 +773,18 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 <section id="gallery" class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <p class="kick rv"><span class="kick-num">05</span><span class="kick-line"></span><span data-scramble="GALLERY & FILMS">GALLERY &amp; FILMS</span></p>
-      <h2 class="lm"><span>The Hub, <em>in pictures.</em></span></h2>
-      <p class="lead rv" style="margin-top:16px">Every edition leaves behind color, henna, woven baskets and new businesses. Click any frame to view it large.</p>
+      <p class="kick rv"><span class="kick-num">07</span><span class="kick-line"></span><span data-scramble="GALLERY & FILMS">GALLERY &amp; FILMS</span></p>
+      <h2 class="lm"><span>The gathering, <em>in pictures.</em></span></h2>
+      <p class="lead rv" style="margin-top:16px">Photographs and short films help show what the Hoyga Hodan experience feels like: learning, connection, culture, creativity and joy. Select any frame to view it large.</p>
     </div>
     <div class="g-masonry">
       <figure class="g-item rv" data-cap="Market Expo · Local produce & grains"><div class="ph"><img src="assets/images/IMG-20260802-WA0106.jpg" alt="Woven baskets of grains, limes, coconuts, mangoes and tomatoes on mats" loading="lazy"></div><figcaption><span>Market Expo</span><span class="gt">Produce &amp; Grains</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="Baraawe Chapter · Launch ceremony"><div class="ph"><img src="assets/images/IMG-20260802-WA0111.jpg" alt="Women cutting a cake beneath the Hoyga Hodan Baraawe banner" loading="lazy"></div><figcaption><span>Baraawe Launch</span><span class="gt">Chapter 02</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Baraawe Gathering · South West State"><div class="ph"><img src="assets/images/IMG-20260802-WA0111.jpg" alt="Women cutting a cake at a Hoyga Hodan Baraawe gathering" loading="lazy"></div><figcaption><span>Baraawe Gathering</span><span class="gt">South West State</span></figcaption></figure>
       <figure class="g-item rv" data-cap="Vendor Showcase · Harvest stall"><div class="ph"><img src="assets/images/IMG-20260802-WA0058.jpg" alt="Hands with gold bangles holding a basket of tomatoes" loading="lazy"></div><figcaption><span>Vendor Showcase</span><span class="gt">Harvest Stall</span></figcaption></figure>
       <figure class="g-item rv" data-cap="Dhaqan Goob · Cultural corner"><div class="ph"><img src="assets/images/IMG-20260802-WA0008.jpg" alt="Group under striped canopy at the Dhaqan Goob cultural corner" loading="lazy"></div><figcaption><span>Dhaqan Goob</span><span class="gt">Cultural Corner</span></figcaption></figure>
       <figure class="g-item rv" data-cap="The Circle · Networking & games"><div class="ph"><img src="assets/images/IMG-20260802-WA0010.jpg" alt="Women in maroon striped garb seated in a circle" loading="lazy"></div><figcaption><span>The Circle</span><span class="gt">Networking</span></figcaption></figure>
       <figure class="g-item rv" data-cap="Sponsor Wall · Gifting moments"><div class="ph"><img src="assets/images/IMG-20260802-WA0112.jpg" alt="Two smiling women holding a golden gift bag at the sponsor backdrop" loading="lazy"></div><figcaption><span>Sponsor Wall</span><span class="gt">Gifting</span></figcaption></figure>
-      <figure class="g-item rv" data-cap="The Gathering · Edition 04"><div class="ph"><img src="assets/images/IMG-20260802-WA0114.jpg" alt="Large indoor gathering of women in colorful traditional dress" loading="lazy"></div><figcaption><span>The Gathering</span><span class="gt">Edition 04</span></figcaption></figure>
+      <figure class="g-item rv" data-cap="Women Together · Community Gathering"><div class="ph"><img src="assets/images/IMG-20260802-WA0114.jpg" alt="Large indoor gathering of women in colorful traditional dress at a Hoyga Hodan event" loading="lazy"></div><figcaption><span>Women Together</span><span class="gt">Community Gathering</span></figcaption></figure>
       <figure class="g-item rv" data-cap="Dhaqan Goob · Maker-to-maker exchange"><div class="ph"><img src="assets/images/IMG-20260802-WA0006.jpg" alt="Two women exchanging a hand-painted tote bag before the Somali flag" loading="lazy"></div><figcaption><span>Maker Exchange</span><span class="gt">Dhaqan Goob</span></figcaption></figure>
     </div>
 
@@ -697,46 +806,49 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
         </div>
       </div>
     </div>
-    <p class="films-note rv"><b>✦ Full recap films</b> air on our media partner <b>Astaan TV</b> — @astaantv — after every edition. Preview loops shown here.</p>
+    <p class="films-note rv"><b>✦ Moving stories</b> are an important part of preserving the experience. These preview loops can later sit alongside approved participant videos and community stories.</p>
   </div>
 </section>
 
 <div class="cloth-strip" aria-hidden="true"></div>
 
+<!-- STORIES -->
+<section id="stories" class="sec sea">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kick rv"><span class="kick-num">08</span><span class="kick-line"></span><span data-scramble="PARTICIPANT STORIES">PARTICIPANT STORIES</span></p>
+      <h2 class="lm"><span>Baraawe showed why the gathering <em>matters.</em></span></h2>
+    </div>
+    <div class="story-stage rv">
+      <figure>
+        <img src="assets/images/IMG-20260802-WA0111.jpg" alt="Women celebrating together at the Hoyga Hodan Baraawe gathering" loading="lazy">
+        <figcaption>Baraawe · South West State / Lower Shabelle</figcaption>
+      </figure>
+      <div class="story-copy">
+        <h3>Connection is part of the outcome.</h3>
+        <p>At the Baraawe gathering, women came together for a shared community experience and expressed strong happiness, emotional connection and interest in having more gatherings. That feedback is an important part of the case for continuing the model.</p>
+        <p>Hoyga Hodan will add authentic participant stories only with approval. Over time, this space can carry a participant’s video, portrait, name, city and own words—never an invented testimonial.</p>
+        <div class="story-slot">Reserved for an approved participant portrait, video or quote · Baraawe</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TEAM -->
 <section id="team" class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <p class="kick rv"><span class="kick-num">06</span><span class="kick-line"></span><span data-scramble="OUR TEAM">OUR TEAM</span></p>
-      <h2 class="lm"><span>Led by women, for <em>youth women.</em></span></h2>
+      <p class="kick rv"><span class="kick-num">09</span><span class="kick-line"></span><span data-scramble="OUR CURRENT TEAM">OUR CURRENT TEAM</span></p>
+      <h2 class="lm"><span>Built by a small team with <em>shared commitment.</em></span></h2>
+      <p class="lead rv" style="margin-top:16px">Hoyga Hodan’s current delivery model relies on a small mix of paid, project-based and unpaid roles. This is intentionally presented transparently as the organization builds capacity.</p>
     </div>
     <div class="team-grid">
-      <article class="t-card rv" style="--tc:var(--crimson)">
-        <div class="mono">HM</div>
-        <h3>Hodan Abdullaahi Mohamed</h3>
-        <span class="t-role">Founder &amp; Program Director</span>
-        <p>Visionary community organizer and creative entrepreneur with deep roots in Mogadishu. Drives program design, partnerships, and strategic direction.</p>
-      </article>
-      <article class="t-card rv" style="--tc:var(--orange);--d:.08s">
-        <div class="mono">AI</div>
-        <h3>Abdirzak Haji Ibrahim</h3>
-        <span class="t-role">Technical &amp; Operations Manager</span>
-        <p>Operations and logistics specialist. Manages finances, vendor coordination, event logistics, and day-to-day program delivery.</p>
-      </article>
-      <article class="t-card rv" style="--tc:var(--amber);--d:.16s">
-        <div class="mono">SA</div>
-        <h3>Sadia Mohamed Ali</h3>
-        <span class="t-role">Program Officer</span>
-        <p>Supports workshop coordination, participant engagement, and curriculum development. Links trainees with mentors and market opportunities.</p>
-      </article>
-      <article class="t-card rv" style="--tc:var(--maroon);--d:.24s">
-        <div class="mono">SO</div>
-        <h3>Sowdo Mohamed Omar</h3>
-        <span class="t-role">Communications &amp; Outreach Officer</span>
-        <p>Manages social media, media relations, participant outreach, and brand visibility. Coordinates with Astaan Media for event coverage.</p>
-      </article>
+      <article class="t-card rv" style="--tc:var(--crimson)"><div class="mono">01</div><h3>Founder / Director</h3><span class="t-role">1 role · unpaid</span><p>Guides the vision, community relationships and overall direction of Hoyga Hodan.</p></article>
+      <article class="t-card rv" style="--tc:var(--orange);--d:.08s"><div class="mono">02</div><h3>Programme &amp; Operations</h3><span class="t-role">1 role · unpaid</span><p>Coordinates gathering delivery, logistics and participant experience.</p></article>
+      <article class="t-card rv" style="--tc:var(--amber);--d:.16s"><div class="mono">03</div><h3>Finance &amp; Trainers</h3><span class="t-role">1 finance role + 2 trainers · unpaid</span><p>Supports basic financial coordination and practical learning through currently unpaid trainer contributions.</p></article>
+      <article class="t-card rv" style="--tc:var(--maroon);--d:.24s"><div class="mono">04</div><h3>Technical, Media &amp; Volunteers</h3><span class="t-role">Developer + media paid · 3–5 volunteers unpaid</span><p>Project-based technical support, paid media support and volunteer effort help make each gathering possible.</p></article>
     </div>
-    <p class="hire-note rv"><b>Growing with purpose →</b> With institutional funding, Hoyga Hodan will hire an <b>M&amp;E Officer</b> and a <b>Finance Officer</b> to strengthen organizational capacity.</p>
+    <p class="hire-note rv"><b>Building capacity carefully →</b> With institutional support, Hoyga Hodan aims to strengthen programme management, finance and administration, monitoring and evaluation, and communications.</p>
   </div>
 </section>
 
@@ -744,23 +856,22 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 <section id="partners" class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <p class="kick rv"><span class="kick-num">07</span><span class="kick-line"></span><span data-scramble="OUR PARTNERS">OUR PARTNERS</span></p>
-      <h2 class="lm"><span>Built with the <em>community.</em></span></h2>
+      <p class="kick rv"><span class="kick-num">10</span><span class="kick-line"></span><span data-scramble="PARTNERS & SUPPORT">PARTNERS &amp; SUPPORT</span></p>
+      <h2 class="lm"><span>Help us build the next <em>gathering.</em></span></h2>
+      <p class="lead rv" style="margin-top:16px">Hoyga Hodan has demonstrated community demand through a model supported by participant contributions, local partnerships, volunteers and in-kind help. The next stage is a more predictable model built with institutional and strategic partners.</p>
     </div>
-    <div class="prow rv">
-      <h3>Astaan Media</h3>
-      <span class="ptype">Media Partner</span>
-      <p>National TV, radio, and digital coverage. Reaches local audiences and the global Somali diaspora.</p>
+    <div class="support-grid" id="support">
+      <article class="support-card rv"><span class="support-ix">01</span><h3>Fund a Programme</h3><p>Support a gathering’s practical learning, cultural activities, accessibility, delivery costs and follow-up.</p></article>
+      <article class="support-card rv" style="--d:.06s"><span class="support-ix">02</span><h3>Sponsor a Participant</h3><p>Help make a welcoming learning and community experience available to women who may need a free place.</p></article>
+      <article class="support-card rv" style="--d:.12s"><span class="support-ix">03</span><h3>Become a Partner</h3><p>Bring a venue, food and water, training, materials, media, mentorship or market connections to the gathering.</p></article>
+      <article class="support-card rv" style="--d:.18s"><span class="support-ix">04</span><h3>Support Expansion</h3><p>Help Hoyga Hodan plan and deliver the next stage across four planned cities, with stronger coordination and learning.</p></article>
     </div>
-    <div class="prow rv" style="--d:.08s">
-      <h3>Local Businesses</h3>
-      <span class="ptype">Sponsors</span>
-      <p>Financial sponsorship, venue access, catering, and in-kind contributions that keep every event alive.</p>
-    </div>
-    <div class="prow rv" style="--d:.16s">
-      <h3>Expert Trainers</h3>
-      <span class="ptype">Volunteers / Stipends</span>
-      <p>Local professionals who deliver workshops in business, technology, finance, and creative arts.</p>
+    <div class="funding-note rv">
+      <div><h3>From community effort to strategic support.</h3></div>
+      <div>
+        <p>The first four gatherings were made possible by $10 participant contributions alongside local businesses, donated services, free food and water, volunteer trainers and staff, discounted or free media, occasional financial support, and founder/team effort. That effort created momentum, but it is unpredictable. Hoyga Hodan is now seeking institutional and strategic partners to support the next stage.</p>
+        <div class="tags"><span>UN Agencies</span><span>Foundations</span><span>NGOs</span><span>Development Organizations</span><span>Businesses</span><span>Local Partners</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -768,40 +879,18 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 <!-- ROADMAP -->
 <section id="roadmap" class="sec" style="padding-bottom:0">
   <div class="banner">
-    <img class="kb" src="assets/images/IMG-20260802-WA0006.jpg" alt="Mogadishu coastline at golden hour">
-    <div class="ovl">
-      <div class="wrap">
-        <span class="bkick rv">08 · Our Vision for Somalia</span>
-        <h2 class="lm"><span>Hoyga Hodan does not intend to stay in Mogadishu. Our vision is <em>national</em> — and eventually regional.</span></h2>
-      </div>
-    </div>
+    <img class="kb" src="assets/images/IMG-20260802-WA0006.jpg" alt="Women sharing a creative exchange at a Hoyga Hodan gathering">
+    <div class="ovl"><div class="wrap"><span class="bkick rv">11 · The Next 12 Months</span><h2 class="lm"><span>Nine planned gatherings across <em>four cities.</em></span></h2></div></div>
   </div>
   <div class="wrap" style="padding-top:clamp(50px,6vw,80px);padding-bottom:clamp(76px,9vw,128px)">
     <div class="rm-bar rv" aria-hidden="true"><i></i><i></i><i></i></div>
-    <div class="rm-years rv"><span>2026</span><span>2027</span><span>2029</span><span>2031</span></div>
+    <div class="rm-years rv"><span>4 Historical Gatherings</span><span>Next 12 Months</span><span>9 Planned Events</span><span>4 Planned Cities</span></div>
     <div class="rm-grid">
-      <article class="rm-card rv" style="--rc:var(--crimson)">
-        <span class="rm-ph">Phase 1 · Foundation</span>
-        <h3>Year 1</h3>
-        <span class="rm-time">2026 – 2027</span>
-        <div class="rm-cities"><span>Mogadishu</span><span>Baraawe</span><span>Garowe</span><span>Kismayo</span><span>Baidoa</span></div>
-        <div class="rm-num">800 <small>trained annually</small></div>
-      </article>
-      <article class="rm-card rv" style="--rc:var(--amber);--d:.1s">
-        <span class="rm-ph">Phase 2 · Acceleration</span>
-        <h3>Years 2 – 3</h3>
-        <span class="rm-time">2027 – 2029</span>
-        <div class="rm-cities"><span>+ Hargeisa</span><span>Beledweyne</span><span>Jowhar</span><span>Bosaso</span><span>Galkayo</span></div>
-        <div class="rm-num">5,000 <small>cumulative</small></div>
-      </article>
-      <article class="rm-card rv" style="--rc:var(--maroon);--d:.2s">
-        <span class="rm-ph">Phase 3 · Consolidation</span>
-        <h3>Years 4 – 5</h3>
-        <span class="rm-time">2029 – 2031</span>
-        <div class="rm-cities"><span>15+ cities</span><span>30+ local CBO partners</span><span>Every Federal Member State</span></div>
-        <div class="rm-num">15,000 <small>cumulative alumni</small></div>
-      </article>
+      <article class="rm-card rv" style="--rc:var(--crimson)"><span class="rm-ph">Planned programme</span><h3>Mogadishu</h3><span class="rm-time">5 planned gatherings</span><div class="rm-cities"><span>Learning</span><span>Community</span><span>Culture</span></div><div class="rm-num">5 <small>planned events</small></div></article>
+      <article class="rm-card rv" style="--rc:var(--amber);--d:.1s"><span class="rm-ph">Planned programme</span><h3>Garoowe</h3><span class="rm-time">2 planned gatherings</span><div class="rm-cities"><span>Learning</span><span>Connection</span><span>Creativity</span></div><div class="rm-num">2 <small>planned events</small></div></article>
+      <article class="rm-card rv" style="--rc:var(--maroon);--d:.2s"><span class="rm-ph">Planned programme</span><h3>Baidoa &amp; Hargeisa</h3><span class="rm-time">1 planned gathering in each city</span><div class="rm-cities"><span>Baidoa</span><span>Hargeisa</span><span>100–150 places/event</span></div><div class="rm-num">2 <small>planned events</small></div></article>
     </div>
+    <p class="event-note rv" style="margin-top:28px"><b>Planning capacity, not a guaranteed result.</b> At a planning midpoint of 125 women per event, the programme represents approximately 1,125 participant places. Confirmed event dates and registration details will be shared when available.</p>
   </div>
 </section>
 
@@ -810,50 +899,50 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
   <div class="wrap">
     <div class="sec-head">
       <p class="kick rv"><span class="kick-num">09</span><span class="kick-line"></span><span data-scramble="THEORY OF CHANGE">THEORY OF CHANGE</span></p>
-      <h2 class="lm"><span>Simple. Proven. <em>Repeatable.</em></span></h2>
+      <h2 class="lm"><span>Built for learning, connection and <em>possibility.</em></span></h2>
     </div>
     <div class="chain">
-      <div class="step rv"><span class="step-k">IF</span><p>we provide <b>affordable, interactive creative entrepreneurship hubs</b></p></div>
-      <div class="step rv"><span class="step-k">THAT</span><p>combine hands-on training in <b>business, AI, content creation, and financial literacy</b></p></div>
-      <div class="step rv"><span class="step-k">WITH</span><p><b>mentorship, market linkages, and alumni networks</b></p></div>
-      <div class="step rv"><span class="step-k">AND</span><p>scale through <b>digital platforms and physical events</b> across Somalia</p></div>
-      <div class="step rv"><span class="step-k">THEN</span><p>youth women gain <b>confidence, skills, and professional networks</b></p></div>
-      <div class="step rv"><span class="step-k">WHICH</span><p>leads to <b>new businesses, income growth, and leadership roles</b></p></div>
-      <div class="step rv"><span class="step-k">ULTIMATELY</span><p>contributing to <b>inclusive economic development and social cohesion</b></p></div>
+      <div class="step rv"><span class="step-k">WHEN</span><p>we create a welcoming space for <b>practical learning, community and culture</b></p></div>
+      <div class="step rv"><span class="step-k">AND</span><p>make room for <b>skills, creativity, traditional games and shared joy</b></p></div>
+      <div class="step rv"><span class="step-k">WITH</span><p><b>networking, peer connection and mentor introductions</b> where available</p></div>
+      <div class="step rv"><span class="step-k">THEN</span><p>women can participate with greater <b>confidence, connection and visibility</b></p></div>
+      <div class="step rv"><span class="step-k">SO</span><p>relationships can continue beyond a single gathering and open <b>future pathways</b></p></div>
+      <div class="step rv"><span class="step-k">WHILE</span><p>Hoyga Hodan learns from attendance, feedback and participant experience to <b>improve responsibly</b></p></div>
+      <div class="step rv"><span class="step-k">OVER TIME</span><p>the organization aims to support more women through <b>careful, partner-backed growth</b></p></div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
-<section id="why" class="sec">
+<!-- MEASUREMENT -->
+<section id="measure" class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <p class="kick rv"><span class="kick-num">10</span><span class="kick-line"></span><span data-scramble="WHY PARTNER WITH US">WHY PARTNER WITH US</span></p>
-      <h2 class="lm"><span>Six reasons to <em>invest.</em></span></h2>
+      <p class="kick rv"><span class="kick-num">12</span><span class="kick-line"></span><span data-scramble="WHAT WE WILL MEASURE NEXT">WHAT WE WILL MEASURE NEXT</span></p>
+      <h2 class="lm"><span>Growth should be felt—and <em>measured.</em></span></h2>
+      <p class="lead rv" style="margin-top:16px">The first four gatherings show participation and demand. As support grows, Hoyga Hodan plans to build a simple, practical learning and impact framework rather than claim outcomes it has not yet measured.</p>
     </div>
-    <div class="why-grid">
-      <article class="w-card wc-3 rv" data-ix="01"><h3>Proven Model</h3><p>Four successful events, 600+ youth women trained, trending social media coverage, and a $5 ticket model that proves community demand and financial viability.</p></article>
-      <article class="w-card wc-3 rv" data-ix="02" style="--d:.08s"><h3>Media Reach</h3><p>Our partnership with Astaan Media gives us national TV, radio, and digital coverage — reaching not just Mogadishu but the global Somali diaspora.</p></article>
-      <article class="w-card wc-2 rv" data-ix="03"><span class="mini">≈$30</span><h3>Low Cost, High Impact</h3><p>Exceptional value per participant compared to traditional vocational training programs.</p></article>
-      <article class="w-card wc-2 rv" data-ix="04" style="--d:.08s"><h3>Cultural Resonance</h3><p>We do not impose foreign models. We wrap skills in Somali celebration — Baraanbur, Dhaanto, poetry, and communal joy — ensuring deep community buy-in.</p></article>
-      <article class="w-card wc-2 rv" data-ix="05" style="--d:.16s"><h3>Youth Women-Led</h3><p>In a country where women’s economic participation is among the world’s lowest, Hoyga Hodan is led by women, for youth women.</p></article>
-      <article class="w-card wc-6 rv"><div><h3>Ready to Scale</h3><p>We have the curriculum, the community trust, the media partnership, and the demand. We need only institutional backing to go national.</p></div><a class="btn btn-crimson" href="#contact">Back the Movement ✦</a></article>
+    <div class="measure-grid">
+      <article class="measure-card rv"><span>To be measured</span><h3>Participation</h3><p>Attendance, completion and the mix of paid and free places.</p></article>
+      <article class="measure-card rv" style="--d:.05s"><span>To be measured</span><h3>Experience</h3><p>Participant satisfaction, confidence and the quality of the gathering experience.</p></article>
+      <article class="measure-card rv" style="--d:.1s"><span>To be measured</span><h3>Learning</h3><p>Skills participants say they gained or want to keep developing.</p></article>
+      <article class="measure-card rv"><span>To be measured</span><h3>Connection</h3><p>New peer, mentor and partner connections made through the programme.</p></article>
+      <article class="measure-card rv" style="--d:.05s"><span>To be measured</span><h3>Action</h3><p>Business or personal action plans that participants choose to pursue.</p></article>
+      <article class="measure-card rv" style="--d:.1s"><span>To be measured</span><h3>Economic Pathways</h3><p>Businesses started or improved and other economic outcomes where participants report them.</p></article>
     </div>
   </div>
 </section>
 
-<!-- ALIGNMENT -->
+<!-- COMMITMENTS -->
 <section id="alignment" class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <p class="kick rv"><span class="kick-num">11</span><span class="kick-line"></span><span data-scramble="NATIONAL & GLOBAL ALIGNMENT">NATIONAL &amp; GLOBAL ALIGNMENT</span></p>
-      <h2 class="lm"><span>Aligned with the goals that <em>matter.</em></span></h2>
+      <p class="kick rv"><span class="kick-num">13</span><span class="kick-line"></span><span data-scramble="HOW WE WANT TO GROW">HOW WE WANT TO GROW</span></p>
+      <h2 class="lm"><span>Warm, local and <em>accountable.</em></span></h2>
     </div>
-    <div class="sdg-row rv"><span class="sdg-badge" style="background:#FF3A21">SDG 5</span><h3>Gender Equality</h3><p>Youth women’s economic empowerment, leadership development, and elimination of barriers to women’s participation.</p></div>
-    <div class="sdg-row rv"><span class="sdg-badge" style="background:#A21C44">SDG 8</span><h3>Decent Work &amp; Economic Growth</h3><p>Youth employment, entrepreneurship, and skills development for productive work.</p></div>
-    <div class="sdg-row rv"><span class="sdg-badge" style="background:#00689D">SDG 16</span><h3>Peace, Justice &amp; Strong Institutions</h3><p>Social cohesion, community unity, and inclusive institutions through youth women’s leadership.</p></div>
-    <div class="sdg-row rv"><span class="sdg-badge" style="background:var(--maroon)">NDP</span><h3>Somalia NDP 2025–2029</h3><p>Inclusive growth, human capital development, and youth women’s economic participation.</p></div>
-    <div class="sdg-row rv"><span class="sdg-badge" style="background:var(--crimson)">NGP</span><h3>Somalia National Gender Policy</h3><p>Youth women’s access to education, employment, and decision-making roles.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:#FF3A21">01</span><h3>Participant-Centred</h3><p>Keep women’s experience, dignity, participation and connection at the centre of every gathering.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:#A21C44">02</span><h3>Locally Grounded</h3><p>Build with Somali culture, local partnerships and the realities participants describe—not a copied model.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:#00689D">03</span><h3>Transparent About Growth</h3><p>Separate what has happened from what is planned, and avoid claiming outcomes before they are measured.</p></div>
+    <div class="sdg-row rv"><span class="sdg-badge" style="background:var(--maroon)">04</span><h3>Open to Partnership</h3><p>Welcome practical partners who can help turn community demand into reliable, well-supported gatherings.</p></div>
   </div>
 </section>
 
@@ -869,8 +958,8 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
   <div class="wrap">
     <div class="sec-head">
       <p class="kick rv"><span class="kick-num">12</span><span class="kick-line"></span><span data-scramble="CONTACT">CONTACT</span></p>
-      <h2 class="lm"><span>Let’s back the next <em>15,000.</em></span></h2>
-      <p class="lead rv" style="margin-top:18px">Funder, partner, media, or future participant — the Hub has a seat for you.</p>
+      <h2 class="lm"><span>Let’s build the next <em>gathering.</em></span></h2>
+      <p class="lead rv" style="margin-top:18px">Future participant, funder, partner, trainer, media collaborator or local supporter—the Hub has a place for you.</p>
     </div>
     <div class="contact-grid">
       <div>
@@ -878,8 +967,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
         <div class="c-item rv" style="--d:.06s"><span class="cl">Email</span><a href="mailto:hothanarts5@gmail.com">hothanarts5@gmail.com</a></div>
         <div class="c-item rv" style="--d:.12s"><span class="cl">Head Office</span><span class="cv">Mogadishu · Benadir Region · Deyniile, Somalia</span></div>
         <div class="c-item rv" style="--d:.18s"><span class="cl">Media</span><span class="cv">Astaan Media — National TV · Radio · Digital</span></div>
-        <div class="socials rv" style="--d:.24s"><span>Facebook</span><span>Instagram</span><span>Twitter</span></div>
-        <p class="legal rv" style="--d:.3s">Community-Based Organization (CBO) — registration in progress · Founded 2025</p>
+        <p class="legal rv" style="--d:.24s">Somali women-led initiative · learning · community · culture · opportunity</p>
       </div>
       <div>
         <form id="contactForm" novalidate>
@@ -891,7 +979,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
             <div><label for="fOrg">Organization</label><input id="fOrg" name="org" type="text" placeholder="Foundation / Embassy / Media"></div>
             <div><label for="fRole">I am a…</label>
               <select id="fRole" name="role">
-                <option>Funder / Investor</option><option>Institutional Partner</option><option>Media</option><option>Volunteer / Trainer</option><option>Future Participant</option>
+                <option>Future Participant</option><option>Funder / Foundation</option><option>Institutional Partner</option><option>Business / Local Partner</option><option>Media</option><option>Volunteer / Trainer</option>
               </select>
             </div>
           </div>
@@ -914,15 +1002,15 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><span class="star">✦</span> HOYGA HODAN</div>
-        <p>Youth Women Empowerment Through Creative Entrepreneurship. Culture, commerce &amp; confidence — from Mogadishu to every Federal Member State.</p>
+        <p>A space where Somali women learn, connect, create and thrive—through practical learning, community, culture and opportunity.</p>
       </div>
       <div>
         <h4>Explore</h4>
-        <a href="#who">Who We Are</a><a href="#story">Our Story</a><a href="#programs">Programs</a><a href="#impact">Impact</a>
+        <a href="#who">About</a><a href="#programs">Programmes</a><a href="#events">Events</a><a href="#impact">Impact</a>
       </div>
       <div>
         <h4>Build</h4>
-        <a href="#gallery">Gallery &amp; Films</a><a href="#team">Team</a><a href="#partners">Partners</a><a href="#roadmap">Roadmap</a>
+        <a href="#gallery">Gallery &amp; Films</a><a href="#stories">Stories</a><a href="#partners">Partners</a><a href="#support">Support Hoyga Hodan</a>
       </div>
       <div>
         <h4>Reach Us</h4>
@@ -933,7 +1021,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Hoyga Hodan · All rights reserved</span>
-      <span>Built with community trust ✦ Mogadishu</span>
+      <span>Built with community, culture &amp; care ✦ Somalia</span>
     </div>
   </div>
 </footer>
@@ -1070,7 +1158,12 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
     lbCap.textContent = galleryItems[lbIndex].getAttribute('data-cap');
   }
   galleryItems.forEach(function(item, i){
-    item.addEventListener('click', function(){ lbShow(i); lightbox.classList.add('open'); document.body.style.overflow='hidden'; });
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', 'Open image: ' + item.getAttribute('data-cap'));
+    function openGalleryItem(){ lbShow(i); lightbox.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+    item.addEventListener('click', openGalleryItem);
+    item.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openGalleryItem(); } });
   });
   function lbClose(){ lightbox.classList.remove('open'); document.body.style.overflow=''; }
   document.getElementById('lbClose').addEventListener('click', lbClose);
