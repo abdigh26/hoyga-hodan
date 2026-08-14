@@ -22,3 +22,9 @@ Date: 2026-08-14
 ## Notes
 
 The existing visual system, responsive layout, gallery, video, navigation, contact form, and other public functionality were left intact. The only public content changes were factual corrections and the requested differentiator/fundraising wording.
+
+## Counter repair verification — 2026-08-14
+
+The Track Record counter repair was tested in a local browser preview with JavaScript enabled. The shared data source at `assets/site-data.js` hydrated the metric elements and the counter animation completed at the verified final values: `4+` Events Delivered, `600+` Women Participants Reached, `422` Paid Participants, `178` Free Participants, `9` Planned Events, and `4` Planned Cities. No console errors or horizontal overflow were observed during the test.
+
+The page retains these exact values before the animation begins and when reduced motion is requested, preventing the previous zero-value failure mode.

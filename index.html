@@ -726,12 +726,12 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       <p class="lead rv" style="margin-top:16px">These reconstructed figures describe the first four gatherings. They are historical participation figures, not audited impact results.</p>
     </div>
     <div class="stats rv">
-      <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Events Delivered</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num">600+</span><span class="stat-label">Women Participants Reached</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num">422</span><span class="stat-label">Paid Participants</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num">178</span><span class="stat-label">Free Participants</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num">9</span><span class="stat-label">Planned Events</span><small class="stat-note">Planned 12-month programme</small></div>
-      <div class="stat"><span class="stat-num">4</span><span class="stat-label">Planned Cities</span><small class="stat-note">Planned 12-month programme</small></div>
+      <div class="stat"><span class="stat-num" data-metric="eventsDelivered">4+</span><span class="stat-label">Events Delivered</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num" data-metric="womenParticipantsReached">600+</span><span class="stat-label">Women Participants Reached</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num" data-metric="paidParticipants">422</span><span class="stat-label">Paid Participants</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num" data-metric="freeParticipants">178</span><span class="stat-label">Free Participants</span><small class="stat-note">Historical</small></div>
+      <div class="stat"><span class="stat-num" data-metric="plannedEvents">9</span><span class="stat-label">Planned Events</span><small class="stat-note">Planned 12-month programme</small></div>
+      <div class="stat"><span class="stat-num" data-metric="plannedCities">4</span><span class="stat-label">Planned Cities</span><small class="stat-note">Planned 12-month programme</small></div>
     </div>
     <div class="impact-grid">
       <div>
@@ -1036,6 +1036,7 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
   <p id="lbCap"></p>
 </div>
 
+<script src="assets/site-data.js"></script>
 <script>
 window.addEventListener('error',function(e){if(e.target!==window)return;document.body.classList.add('loaded');var els=document.querySelectorAll('.rv,.lm');for(var i=0;i<els.length;i++){els[i].classList.add('on');}},true);
 setTimeout(function(){document.body.classList.add('loaded');},1500);
@@ -1106,10 +1107,31 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
     scrambleEls.forEach(function(el){ scrambleObs.observe(el); });
   }
 
-  /* counters */
+  /* Historical track-record counters — values are hydrated from assets/site-data.js. */
+  var siteData = window.HOYGA_HODAN_SITE_DATA || {};
+  var historicalData = siteData.historicalTrackRecord || {};
+  var plannedData = siteData.plannedProgramme || {};
+  var metricDefinitions = {
+    eventsDelivered: { value: historicalData.eventsDelivered, suffix: '+' },
+    womenParticipantsReached: { value: historicalData.womenParticipantsReached, suffix: '+' },
+    paidParticipants: { value: historicalData.paidParticipants, suffix: '' },
+    freeParticipants: { value: historicalData.freeParticipants, suffix: '' },
+    plannedEvents: { value: plannedData.events, suffix: '' },
+    plannedCities: { value: plannedData.cities, suffix: '' }
+  };
+  var counterEls = document.querySelectorAll('[data-metric]');
+  counterEls.forEach(function(el){
+    var definition = metricDefinitions[el.getAttribute('data-metric')];
+    if(!definition || !Number.isFinite(definition.value)){ return; }
+    el.setAttribute('data-count', String(definition.value));
+    el.setAttribute('data-suffix', definition.suffix);
+    /* Accurate values remain visible until the section scrolls into view. */
+    el.textContent = definition.value + definition.suffix;
+  });
   function runCounter(el){
-    var target = parseInt(el.getAttribute('data-count'), 10);
+    var target = Number(el.getAttribute('data-count'));
     var suffix = el.getAttribute('data-suffix') || '';
+    if(!Number.isFinite(target)){ return; }
     if(reduced){ el.textContent = target + suffix; return; }
     var startTime = null, duration = 1800;
     function frame(now){
@@ -1118,17 +1140,17 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
       var eased = 1 - Math.pow(1 - progress, 3);
       el.textContent = Math.round(target * eased) + suffix;
       if(progress < 1){ requestAnimationFrame(frame); }
+      else { el.textContent = target + suffix; }
     }
     requestAnimationFrame(frame);
   }
-  var counterEls = document.querySelectorAll('[data-count]');
   if('IntersectionObserver' in window){
     var counterObs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if(entry.isIntersecting){ runCounter(entry.target); counterObs.unobserve(entry.target); }
       });
     }, {threshold:0.6});
-    counterEls.forEach(function(el){ counterObs.observe(el); });
+    counterEls.forEach(function(el){ if(el.hasAttribute('data-count')){ counterObs.observe(el); } });
   } else { counterEls.forEach(runCounter); }
 
   /* scrollspy */
