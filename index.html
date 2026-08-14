@@ -377,6 +377,21 @@ blockquote cite{display:block;margin-top:16px;padding-left:56px;font-style:norma
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
 .stats{grid-template-columns:repeat(3,1fr)}
 .stat-note{display:block;margin-top:7px;color:rgba(243,227,208,.5);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+/* Impact metrics are grouped by time frame so planned activity is never read as completed impact. */
+.stats.stats--grouped{display:flex;flex-direction:column;gap:clamp(22px,3vw,30px);background:transparent;border:0;margin-bottom:clamp(40px,5vw,64px)}
+.stats-group{border:1.5px solid var(--line-l);background:rgba(255,255,255,.025)}
+.stats-group__head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1.5px solid var(--line-l)}
+.stats-group__title{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.stats-group__context{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,227,208,.58);text-align:right}
+.stats-group__detail{margin:0;padding:12px 18px 0;font-size:13px;font-weight:300;color:rgba(243,227,208,.78)}
+.stats-grid{display:grid;gap:1.5px;background:var(--line-l)}
+.stats-grid--historical{grid-template-columns:repeat(4,1fr)}
+.stats-grid--planned{grid-template-columns:repeat(2,1fr);margin-top:14px}
+.stats-grid .stat{min-width:0}
+.stat-num.metric-is-revealed{animation:metricValueIn .62s cubic-bezier(.2,.8,.2,1) both}
+@keyframes metricValueIn{0%{opacity:.3;transform:translateY(8px) scale(.96)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:1080px){.stats-grid--historical{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.stats-group__head{align-items:flex-start;flex-direction:column;gap:5px}.stats-group__context{text-align:left}.stats-grid--historical,.stats-grid--planned{grid-template-columns:1fr}}
 #experience{background:var(--cream2)}
 .experience-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,74px);align-items:end;margin-bottom:42px}
 .experience-intro p{font-size:clamp(16px,1.45vw,19px);font-weight:300}
@@ -725,13 +740,30 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
       <h2 class="lm"><span>Demand we can <em>see.</em></span></h2>
       <p class="lead rv" style="margin-top:16px">These reconstructed figures describe the first four gatherings. They are historical participation figures, not audited impact results.</p>
     </div>
-    <div class="stats rv">
-      <div class="stat"><span class="stat-num" data-metric="eventsDelivered">4+</span><span class="stat-label">Events Delivered</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num" data-metric="womenParticipantsReached">600+</span><span class="stat-label">Women Participants Reached</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num" data-metric="paidParticipants">422</span><span class="stat-label">Paid Participants</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num" data-metric="freeParticipants">178</span><span class="stat-label">Free Participants</span><small class="stat-note">Historical</small></div>
-      <div class="stat"><span class="stat-num" data-metric="plannedEvents">9</span><span class="stat-label">Planned Events</span><small class="stat-note">Planned 12-month programme</small></div>
-      <div class="stat"><span class="stat-num" data-metric="plannedCities">4</span><span class="stat-label">Planned Cities</span><small class="stat-note">Planned 12-month programme</small></div>
+    <div class="stats stats--grouped rv" aria-label="Hoyga Hodan historical and planned programme metrics">
+      <section class="stats-group" aria-labelledby="historical-metrics-heading">
+        <div class="stats-group__head">
+          <h3 class="stats-group__title" id="historical-metrics-heading">Historical track record</h3>
+          <span class="stats-group__context">First four gatherings</span>
+        </div>
+        <div class="stats-grid stats-grid--historical">
+          <div class="stat"><span class="stat-num" data-metric="eventsDelivered">4+</span><span class="stat-label">Events Delivered</span><small class="stat-note">Historical</small></div>
+          <div class="stat"><span class="stat-num" data-metric="womenParticipantsReached">~600</span><span class="stat-label">Women Participants Reached</span><small class="stat-note">Historical</small></div>
+          <div class="stat"><span class="stat-num" data-metric="paidParticipants">422</span><span class="stat-label">Paid Participants</span><small class="stat-note">Historical</small></div>
+          <div class="stat"><span class="stat-num" data-metric="freeParticipants">178</span><span class="stat-label">Free Participants</span><small class="stat-note">Historical</small></div>
+        </div>
+      </section>
+      <section class="stats-group" aria-labelledby="planned-metrics-heading">
+        <div class="stats-group__head">
+          <h3 class="stats-group__title" id="planned-metrics-heading">Next 12 months</h3>
+          <span class="stats-group__context">Planned programme — not achieved impact</span>
+        </div>
+        <p class="stats-group__detail">9 planned events in 4 planned cities, with approximately 1,125 planned participant places at the 125-per-event planning midpoint.</p>
+        <div class="stats-grid stats-grid--planned">
+          <div class="stat"><span class="stat-num" data-metric="plannedEvents">9</span><span class="stat-label">Planned Events</span><small class="stat-note">Planned 12-month programme</small></div>
+          <div class="stat"><span class="stat-num" data-metric="plannedCities">4</span><span class="stat-label">Planned Cities</span><small class="stat-note">Planned 12-month programme</small></div>
+        </div>
+      </section>
     </div>
     <div class="impact-grid">
       <div>
@@ -1107,51 +1139,85 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
     scrambleEls.forEach(function(el){ scrambleObs.observe(el); });
   }
 
-  /* Historical track-record counters — values are hydrated from assets/site-data.js. */
-  var siteData = window.HOYGA_HODAN_SITE_DATA || {};
-  var historicalData = siteData.historicalTrackRecord || {};
-  var plannedData = siteData.plannedProgramme || {};
-  var metricDefinitions = {
-    eventsDelivered: { value: historicalData.eventsDelivered, suffix: '+' },
-    womenParticipantsReached: { value: historicalData.womenParticipantsReached, suffix: '+' },
-    paidParticipants: { value: historicalData.paidParticipants, suffix: '' },
-    freeParticipants: { value: historicalData.freeParticipants, suffix: '' },
-    plannedEvents: { value: plannedData.events, suffix: '' },
-    plannedCities: { value: plannedData.cities, suffix: '' }
-  };
+  /* Source-backed impact metrics. The verified number is never overwritten with an animation frame. */
   var counterEls = document.querySelectorAll('[data-metric]');
-  counterEls.forEach(function(el){
-    var definition = metricDefinitions[el.getAttribute('data-metric')];
-    if(!definition || !Number.isFinite(definition.value)){ return; }
-    el.setAttribute('data-count', String(definition.value));
-    el.setAttribute('data-suffix', definition.suffix);
-    /* Accurate values remain visible until the section scrolls into view. */
-    el.textContent = definition.value + definition.suffix;
-  });
-  function runCounter(el){
-    var target = Number(el.getAttribute('data-count'));
-    var suffix = el.getAttribute('data-suffix') || '';
-    if(!Number.isFinite(target)){ return; }
-    if(reduced){ el.textContent = target + suffix; return; }
-    var startTime = null, duration = 1800;
-    function frame(now){
-      if(startTime === null) startTime = now;
-      var progress = Math.min(1, (now - startTime) / duration);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if(progress < 1){ requestAnimationFrame(frame); }
-      else { el.textContent = target + suffix; }
-    }
-    requestAnimationFrame(frame);
+  var counterObs = null;
+
+  function metricDefinitionsFrom(siteData){
+    var historicalData = (siteData && siteData.historicalTrackRecord) || {};
+    var plannedData = (siteData && siteData.plannedProgramme) || {};
+    return {
+      eventsDelivered: { value: historicalData.eventsDelivered, suffix: '+' },
+      womenParticipantsReached: { value: historicalData.womenParticipantsReached, prefix: '~', suffix: '' },
+      paidParticipants: { value: historicalData.paidParticipants, suffix: '' },
+      freeParticipants: { value: historicalData.freeParticipants, suffix: '' },
+      plannedEvents: { value: plannedData.events, suffix: '' },
+      plannedCities: { value: plannedData.cities, suffix: '' }
+    };
   }
-  if('IntersectionObserver' in window){
-    var counterObs = new IntersectionObserver(function(entries){
+
+  function hydrateMetrics(){
+    var definitions = metricDefinitionsFrom(window.HOYGA_HODAN_SITE_DATA);
+    var hydrated = 0;
+    counterEls.forEach(function(el){
+      var definition = definitions[el.getAttribute('data-metric')];
+      if(!definition || !Number.isFinite(definition.value)){ return; }
+      var prefix = definition.prefix || '';
+      var suffix = definition.suffix || '';
+      el.setAttribute('data-count', String(definition.value));
+      el.setAttribute('data-prefix', prefix);
+      el.setAttribute('data-suffix', suffix);
+      el.textContent = prefix + definition.value + suffix;
+      hydrated += 1;
+    });
+    return hydrated === counterEls.length;
+  }
+
+  function revealMetric(el){
+    if(el.getAttribute('data-metric-revealed') === 'true'){ return; }
+    el.setAttribute('data-metric-revealed', 'true');
+    if(!reduced){ el.classList.add('metric-is-revealed'); }
+  }
+
+  function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+    return rect.bottom > 0 && rect.top < (window.innerHeight || document.documentElement.clientHeight);
+  }
+
+  function observeMetrics(){
+    counterEls.forEach(function(el){
+      if(!el.hasAttribute('data-count')){ return; }
+      if(reduced || !('IntersectionObserver' in window) || isInViewport(el)){
+        revealMetric(el);
+      } else if(counterObs){
+        counterObs.observe(el);
+      }
+    });
+  }
+
+  var metricsHydrated = hydrateMetrics();
+  if('IntersectionObserver' in window && !reduced){
+    counterObs = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
-        if(entry.isIntersecting){ runCounter(entry.target); counterObs.unobserve(entry.target); }
+        if(entry.isIntersecting){
+          revealMetric(entry.target);
+          counterObs.unobserve(entry.target);
+        }
       });
-    }, {threshold:0.6});
-    counterEls.forEach(function(el){ if(el.hasAttribute('data-count')){ counterObs.observe(el); } });
-  } else { counterEls.forEach(runCounter); }
+    }, {threshold:0.1, rootMargin:'0px 0px -10% 0px'});
+  }
+  requestAnimationFrame(observeMetrics);
+
+  /* Retain correct HTML fallbacks if the data asset cannot load; retry on full load for late data. */
+  if(!metricsHydrated){
+    window.addEventListener('load', function(){
+      if(hydrateMetrics()){ observeMetrics(); }
+    }, {once:true});
+  }
+  window.addEventListener('pageshow', function(){
+    hydrateMetrics();
+    observeMetrics();
+  });
 
   /* scrollspy */
   var spyLinks = document.querySelectorAll('.nav-links a[data-spy]');
