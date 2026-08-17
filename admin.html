@@ -48,13 +48,14 @@
       return '<article class="mcard"><h3>'+escapeHtml(m.name)+'</h3><div class="meta">'+escapeHtml(m.email)+(m.org?' · '+escapeHtml(m.org):'')+(m.role?' · '+escapeHtml(m.role):'')+' · '+new Date(m.receivedAt).toLocaleString()+'</div><p class="msg">'+escapeHtml(m.message)+'</p></article>';
     }).join('');
   }
+  const apiOrigin = window.location.hostname.endsWith('.github.io') ? 'https://hoyga-hodan.vercel.app' : '';
   async function loadMessages(){
     const token = tokenInput.value.trim();
     accessError.style.display = 'none';
     if(!token){ accessError.textContent = 'Enter the ADMIN_TOKEN first.'; accessError.style.display = 'block'; tokenInput.focus(); return; }
     list.innerHTML = '<p class="empty">Loading messages…</p>';
     try {
-      const response = await fetch('/api/contact?list=1', { headers: {'x-admin-token': token}, cache: 'no-store' });
+      const response = await fetch(apiOrigin + '/api/contact?list=1', { headers: {'x-admin-token': token}, cache: 'no-store' });
       if(!response.ok){
         if(response.status === 401) throw new Error('The token was not accepted. Check the ADMIN_TOKEN in Vercel and try again.');
         throw new Error('Messages could not be loaded right now.');

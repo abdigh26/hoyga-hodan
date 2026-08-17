@@ -51,6 +51,21 @@ function hasAdminAccess(req) {
 }
 
 module.exports = async (req, res) => {
+  const allowedOrigins = new Set([
+    "https://abdigh26.github.io",
+    "https://hoyga-hodan.vercel.app",
+    "https://hoygahodan.so",
+    "https://www.hoygahodan.so",
+  ]);
+  const origin = req.headers.origin;
+  if (origin && allowedOrigins.has(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, X-Admin-Token");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.setHeader("Vary", "Origin");
+  }
+  if (req.method === "OPTIONS") return res.status(204).end();
+
   // The message viewer is deliberately protected. The old public GET route would
   // otherwise expose contact submissions to anyone who knew the endpoint.
   if (req.method === "GET" && req.query && req.query.list) {

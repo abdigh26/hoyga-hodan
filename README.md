@@ -18,6 +18,10 @@ The intended public domain is `https://www.hoygahodan.so/`. The final domain cut
 
 > The verification value is unique to the Vercel project and may change. Always copy the current value from Vercel instead of relying on an older record.
 
+## Temporary GitHub Pages fallback
+
+The repository also includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`. It publishes the static site at `https://abdigh26.github.io/hoyga-hodan/` when GitHub Pages is enabled for the repository. Vercel remains the canonical host because it runs the contact API and owns the custom-domain configuration. The GitHub Pages copy forwards contact-form and protected-viewer requests to the Vercel API.
+
 ## Contact form
 
 The public form posts to `/api/contact`. For a production-ready, durable inquiry workflow, configure the following **Vercel environment variables**:

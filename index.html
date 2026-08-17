@@ -1295,7 +1295,8 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
     requestAnimationFrame(loop);
   });
 
-  /* contact form — posts to Vercel serverless API (api/contact.js) */
+  /* Contact form — Vercel owns the API, including when this static page is on GitHub Pages. */
+  var contactApiOrigin = window.location.hostname.endsWith('.github.io') ? 'https://hoyga-hodan.vercel.app' : '';
   var contactForm = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
   contactForm.addEventListener('submit', function(event){
@@ -1312,7 +1313,7 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
       role: (document.getElementById('fRole').value || '').trim(),
       message: document.getElementById('fMsg').value.trim()
     };
-    fetch('/api/contact', {
+    fetch(contactApiOrigin + '/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
