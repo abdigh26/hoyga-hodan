@@ -20,7 +20,7 @@ The intended public domain is `https://www.hoygahodan.so/`. The final domain cut
 
 ## Temporary GitHub Pages fallback
 
-The repository also includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`. It publishes the static site at `https://abdigh26.github.io/hoyga-hodan/` when GitHub Pages is enabled for the repository. Vercel remains the canonical host because it runs the contact API and owns the custom-domain configuration. The GitHub Pages copy forwards contact-form and protected-viewer requests to the Vercel API.
+GitHub Pages is enabled from the `main` branch root and publishes the static site at `https://abdigh26.github.io/hoyga-hodan/`. This repository has no framework or build step, so the legacy branch-based Pages source is sufficient. Vercel remains the canonical host because it runs the contact API and owns the custom-domain configuration. The GitHub Pages copy forwards contact-form and protected-viewer requests to the Vercel API.
 
 ## Contact form
 
