@@ -558,6 +558,17 @@ body.page-home .home-summary{display:block}
 
 /* Remove animated decorative text bands for a calmer layout. */
 .ticker{display:none!important}
+
+/* Contact contrast: cream surface with readable ink-colored copy and controls. */
+#contact{background:var(--card);color:var(--ink)}
+#contact .lead{color:var(--ink2)}
+#contact .c-item{border-color:var(--line)}
+#contact .c-item a,#contact .c-item span.cv{color:var(--ink)}
+#contact .c-item a:hover{color:var(--crimson)}
+#contactForm input,#contactForm select,#contactForm textarea{color:var(--ink);border-color:var(--line)}
+#contactForm input::placeholder,#contactForm textarea::placeholder{color:rgba(36,9,13,.52);opacity:1}
+#contactForm input:focus,#contactForm select:focus,#contactForm textarea:focus{border-color:var(--crimson)}
+#contact .legal{color:rgba(36,9,13,.58)}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}.lm>span{transform:none!important}</style></noscript>
 <script type="application/ld+json">
