@@ -523,6 +523,23 @@ footer{background:#180507;color:rgba(243,227,208,.8)}
 footer .cloth-band{height:64px}
 @media(max-width:980px){#programs .stack{grid-template-columns:1fr 1fr}#programs .p-card{min-height:420px}}
 @media(max-width:640px){.hero{padding-top:112px;padding-bottom:68px}.hero-title{font-size:clamp(48px,14vw,78px)}.hero-collage{min-height:520px;margin-top:18px}#programs .stack{grid-template-columns:1fr}#programs .p-card{min-height:0}#programs .p-card .p-img{margin-top:4px}}
+
+/* Multi-page routing layer: each page keeps the same accessible shell and shared assets. */
+body.page-about .hero,body.page-about #programs,body.page-about #impact,body.page-about #gallery,body.page-about #partners,body.page-about #contact{display:none!important}
+body.page-about #who,body.page-about #story{display:block!important}
+body.page-work .hero,body.page-work #who,body.page-work #impact,body.page-work #gallery,body.page-work #partners,body.page-work #contact{display:none!important}
+body.page-work #programs,body.page-work #experience{display:block!important}
+body.page-impact .hero,body.page-impact #who,body.page-impact #programs,body.page-impact #gallery,body.page-impact #partners,body.page-impact #contact{display:none!important}
+body.page-impact #impact,body.page-impact #change,body.page-impact #measure{display:block!important}
+body.page-events .hero,body.page-events #who,body.page-events #programs,body.page-events #impact,body.page-events #gallery,body.page-events #partners,body.page-events #contact{display:none!important}
+body.page-events #events{display:block!important}
+body.page-gallery .hero,body.page-gallery #who,body.page-gallery #programs,body.page-gallery #impact,body.page-gallery #partners,body.page-gallery #contact{display:none!important}
+body.page-gallery #gallery,body.page-gallery #stories{display:block!important}
+body.page-partners .hero,body.page-partners #who,body.page-partners #programs,body.page-partners #impact,body.page-partners #gallery,body.page-partners #contact{display:none!important}
+body.page-partners #partners,body.page-partners #roadmap,body.page-partners #alignment{display:block!important}
+body.page-contact .hero,body.page-contact #who,body.page-contact #programs,body.page-contact #impact,body.page-contact #gallery,body.page-contact #partners{display:none!important}
+body.page-contact #contact{display:block!important}
+.page-inner-title{padding:150px 0 30px;background:var(--cream2)}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}.lm>span{transform:none!important}</style></noscript>
 <script type="application/ld+json">
@@ -536,7 +553,7 @@ footer .cloth-band{height:64px}
 }
 </script>
 </head>
-<body>
+<body class="page-home">
 <a class="skip-link" href="#top">Skip to main content</a>
 <div class="noise" aria-hidden="true"></div>
 
@@ -544,24 +561,24 @@ footer .cloth-band{height:64px}
   <div class="wrap nav-inner">
     <a class="logo" href="#top"><img class="logo-full" src="assets/images/logo-full.png" alt="Hoyga Hodan"></a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#who" data-spy>Our Story</a>
-      <a href="#programs" data-spy>Our Work</a>
-      <a href="#impact" data-spy>Impact</a>
-      <a href="#gallery" data-spy>Gallery</a>
-      <a href="#partners" data-spy>Partnerships</a>
+      <a href="about.html" data-spy>Our Story</a>
+      <a href="work.html" data-spy>Our Work</a>
+      <a href="impact.html" data-spy>Impact</a>
+      <a href="gallery.html" data-spy>Gallery</a>
+      <a href="partners.html" data-spy>Partnerships</a>
     </nav>
-    <a class="nav-cta" href="#contact">Start a Conversation</a>
+    <a class="nav-cta" href="contact.html">Start a Conversation</a>
     <button id="navToggle" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
 <nav id="mobileMenu" aria-label="Mobile">
-  <a href="#who">Our Story</a>
-  <a href="#programs">Our Work</a>
-  <a href="#impact">Impact</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#partners">Partnerships</a>
-  <a href="#contact">Contact</a>
-  <a href="#support">Support Hoyga Hodan</a>
+  <a href="about.html">Our Story</a>
+  <a href="work.html">Our Work</a>
+  <a href="impact.html">Impact</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="partners.html">Partnerships</a>
+  <a href="contact.html">Contact</a>
+  <a href="partners.html#support">Support Hoyga Hodan</a>
 </nav>
 
 <main id="top">
@@ -578,8 +595,8 @@ footer .cloth-band{height:64px}
       <p class="hero-tag lm hero-lm"><span style="--d:.3s">A welcoming space for Somali women to build skills, confidence and community.</span></p>
       <p class="hero-copy rv" style="--d:.4s">Hoyga Hodan Foundation brings women together through practical learning, cultural connection and opportunities to grow—side by side, with care.</p>
       <div class="hero-btns rv" style="--d:.5s">
-        <a class="btn btn-crimson" href="#contact">Start a Conversation</a>
-        <a class="btn" href="#support">Support Hoyga Hodan ↓</a>
+        <a class="btn btn-crimson" href="contact.html">Start a Conversation</a>
+        <a class="btn" href="partners.html#support">Support Hoyga Hodan ↓</a>
       </div>
       <div class="hero-chips rv" style="--d:.6s">
         <span><b>2024</b> Founded</span>
@@ -821,7 +838,7 @@ footer .cloth-band{height:64px}
       <article class="event-card rv" style="--d:.12s"><span class="eyebrow">Past gathering · Mogadishu</span><h3>Dhaqan Gooob</h3><span class="event-place">Mogadishu</span><span class="event-count">200</span><p>participants · 140 paid · 60 free</p></article>
       <article class="event-card rv" style="--d:.18s"><span class="eyebrow">Past gathering · South West State</span><h3>Baraawe</h3><span class="event-place">Lower Shabelle</span><span class="event-count">150</span><p>participants · 131 paid · 19 free</p></article>
     </div>
-    <div class="event-note rv"><b>Looking ahead.</b> Hoyga Hodan is planning future gatherings and will share confirmed dates and registration details through its official channels. To express interest in a future event or partnership, <a href="#contact"><b>contact the team</b></a>.</div>
+    <div class="event-note rv"><b>Looking ahead.</b> Hoyga Hodan is planning future gatherings and will share confirmed dates and registration details through its official channels. To express interest in a future event or partnership, <a href="contact.html"><b>contact the team</b></a>.</div>
   </div>
 </section>
 
@@ -1062,11 +1079,11 @@ footer .cloth-band{height:64px}
       </div>
       <div>
         <h4>Explore</h4>
-        <a href="#who">Our Story</a><a href="#programs">Our Work</a><a href="#impact">Impact</a><a href="#gallery">Gallery</a>
+        <a href="about.html">Our Story</a><a href="work.html">Our Work</a><a href="impact.html">Impact</a><a href="gallery.html">Gallery</a>
       </div>
       <div>
         <h4>Build</h4>
-        <a href="#gallery">Gallery &amp; Films</a><a href="#partners">Partnerships</a><a href="#contact">Contact</a><a href="#support">Support Hoyga Hodan</a>
+        <a href="gallery.html">Gallery &amp; Films</a><a href="partners.html">Partnerships</a><a href="contact.html">Contact</a><a href="partners.html#support">Support Hoyga Hodan</a>
       </div>
       <div>
         <h4>Reach Us</h4>
