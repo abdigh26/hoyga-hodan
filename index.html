@@ -645,8 +645,8 @@ body.page-home .home-event5{display:grid}
       </div>
       <div class="hero-chips rv" style="--d:.6s">
         <span><b>2024</b> Founded</span>
-        <span><b>4+</b> Historical Events</span>
-        <span><b>~600</b> Women Reached</span>
+        <span><b>5</b> Historical Events</span>
+        <span><b>~787</b> Women Reached</span>
       </div>
       <div class="scroll-cue rv" style="--d:.7s"><i></i>Scroll the story</div>
     </div>
@@ -818,19 +818,19 @@ body.page-home .home-event5{display:grid}
     <div class="sec-head">
       <p class="kick rv"><span class="kick-num">05</span><span class="kick-line"></span><span data-scramble="HISTORICAL TRACK RECORD">HISTORICAL TRACK RECORD</span></p>
       <h2 class="lm"><span>Demand we can <em>see.</em></span></h2>
-      <p class="lead rv" style="margin-top:16px">These reconstructed figures describe the first four gatherings. They are historical participation figures, not audited impact results.</p>
+      <p class="lead rv" style="margin-top:16px">These historical figures combine reconstructed participation from the first four gatherings with recorded Event 5 attendance. They are participation figures, not audited impact results.</p>
     </div>
     <div class="stats stats--grouped rv" aria-label="Hoyga Hodan historical and planned programme metrics">
       <section class="stats-group" aria-labelledby="historical-metrics-heading">
         <div class="stats-group__head">
           <h3 class="stats-group__title" id="historical-metrics-heading">Historical track record</h3>
-          <span class="stats-group__context">First four gatherings</span>
+          <span class="stats-group__context">First five documented gatherings</span>
         </div>
         <div class="stats-grid stats-grid--historical">
-          <div class="stat"><span class="stat-num" data-metric="eventsDelivered">4+</span><span class="stat-label">Events Delivered</span><small class="stat-note">Historical</small></div>
-          <div class="stat"><span class="stat-num" data-metric="womenParticipantsReached">~600</span><span class="stat-label">Women Participants Reached</span><small class="stat-note">Historical</small></div>
-          <div class="stat"><span class="stat-num" data-metric="paidParticipants">422</span><span class="stat-label">Paid Participants</span><small class="stat-note">Historical</small></div>
-          <div class="stat"><span class="stat-num" data-metric="freeParticipants">178</span><span class="stat-label">Free Participants</span><small class="stat-note">Historical</small></div>
+          <div class="stat"><span class="stat-num" data-metric="eventsDelivered">5</span><span class="stat-label">Events Delivered</span><small class="stat-note">Historical</small></div>
+          <div class="stat"><span class="stat-num" data-metric="womenParticipantsReached">~787</span><span class="stat-label">Women Participants Reached</span><small class="stat-note">Historical</small></div>
+          <div class="stat"><span class="stat-num" data-metric="paidParticipants">565</span><span class="stat-label">Paid Participants</span><small class="stat-note">Historical</small></div>
+          <div class="stat"><span class="stat-num" data-metric="freeParticipants">222</span><span class="stat-label">Free Participants</span><small class="stat-note">Historical</small></div>
         </div>
       </section>
       <section class="stats-group" aria-labelledby="planned-metrics-heading">
@@ -1037,7 +1037,7 @@ body.page-home .home-event5{display:grid}
     <div class="sec-head">
       <p class="kick rv"><span class="kick-num">12</span><span class="kick-line"></span><span data-scramble="WHAT WE WILL MEASURE NEXT">WHAT WE WILL MEASURE NEXT</span></p>
       <h2 class="lm"><span>Growth should be felt—and <em>measured.</em></span></h2>
-      <p class="lead rv" style="margin-top:16px">The first four gatherings show participation and demand. As support grows, Hoyga Hodan plans to build a simple, practical learning and impact framework rather than claim outcomes it has not yet measured.</p>
+      <p class="lead rv" style="margin-top:16px">The first five documented gatherings show participation and demand. As support grows, Hoyga Hodan plans to build a simple, practical learning and impact framework rather than claim outcomes it has not yet measured.</p>
     </div>
     <div class="measure-grid">
       <article class="measure-card rv"><span>To be measured</span><h3>Participation</h3><p>Attendance, completion and the mix of paid and free places.</p></article>
@@ -1226,7 +1226,7 @@ setTimeout(function(){document.body.classList.add('loaded');},1500);
     var historicalData = (siteData && siteData.historicalTrackRecord) || {};
     var plannedData = (siteData && siteData.plannedProgramme) || {};
     return {
-      eventsDelivered: { value: historicalData.eventsDelivered, suffix: '+' },
+      eventsDelivered: { value: historicalData.eventsDelivered, suffix: '' },
       womenParticipantsReached: { value: historicalData.womenParticipantsReached, prefix: '~', suffix: '' },
       paidParticipants: { value: historicalData.paidParticipants, suffix: '' },
       freeParticipants: { value: historicalData.freeParticipants, suffix: '' },
