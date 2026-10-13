@@ -526,15 +526,15 @@ footer .cloth-band{height:64px}
 
 /* Multi-page routing layer: each page keeps the same accessible shell and shared assets. */
 body.page-about .hero,body.page-about #programs,body.page-about #impact,body.page-about #gallery,body.page-about #partners,body.page-about #contact{display:none!important}
-body.page-about #who,body.page-about #story{display:block!important}
+body.page-about #who,body.page-about #story,body.page-about #team{display:block!important}
 body.page-work .hero,body.page-work #who,body.page-work #impact,body.page-work #gallery,body.page-work #partners,body.page-work #contact{display:none!important}
 body.page-work #programs,body.page-work #experience{display:block!important}
 body.page-impact .hero,body.page-impact #who,body.page-impact #programs,body.page-impact #gallery,body.page-impact #partners,body.page-impact #contact{display:none!important}
 body.page-impact #impact,body.page-impact #change,body.page-impact #measure{display:block!important}
 body.page-events .hero,body.page-events #who,body.page-events #programs,body.page-events #impact,body.page-events #gallery,body.page-events #partners,body.page-events #contact{display:none!important}
-body.page-events #events{display:block!important}
+body.page-events #events,body.page-events #stories{display:block!important}
 body.page-gallery .hero,body.page-gallery #who,body.page-gallery #programs,body.page-gallery #impact,body.page-gallery #partners,body.page-gallery #contact{display:none!important}
-body.page-gallery #gallery,body.page-gallery #stories{display:block!important}
+body.page-gallery #gallery{display:block!important}
 body.page-partners .hero,body.page-partners #who,body.page-partners #programs,body.page-partners #impact,body.page-partners #gallery,body.page-partners #contact{display:none!important}
 body.page-partners #partners,body.page-partners #roadmap,body.page-partners #alignment{display:block!important}
 body.page-contact .hero,body.page-contact #who,body.page-contact #programs,body.page-contact #impact,body.page-contact #gallery,body.page-contact #partners{display:none!important}
@@ -542,7 +542,14 @@ body.page-contact #contact{display:block!important}
 .page-inner-title{padding:150px 0 30px;background:var(--cream2)}
 
 /* Home is a landing page; detail lives on the dedicated pages. */
-body.page-home #who,body.page-home #programs,body.page-home #impact,body.page-home #gallery,body.page-home #partners,body.page-home #contact{display:none!important}
+body.page-home .home-summary,body.page-home #story,body.page-home #experience,body.page-home #events,body.page-home #gallery,body.page-home #stories,body.page-home #team,body.page-home #roadmap,body.page-home #change,body.page-home #measure,body.page-home #alignment,body.page-home #contact{display:none!important}
+body.page-home #who,body.page-home #programs,body.page-home #impact,body.page-home #partners{display:block!important}
+body.page-home main#top{display:flex;flex-direction:column}
+body.page-home main#top>.hero{order:1}
+body.page-home main#top>#impact{order:2}
+body.page-home main#top>#programs{order:3}
+body.page-home main#top>#who{order:4}
+body.page-home main#top>#partners{order:5}
 .home-summary{display:none;background:var(--cream2);padding:clamp(72px,9vw,120px) 0;border-top:1px solid var(--line)}
 body.page-home .home-summary{display:block}
 .home-summary-head{max-width:680px;margin-bottom:36px}
@@ -657,12 +664,6 @@ body.page-home .home-summary{display:block}
   </div>
 </section>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>&nbsp;LEARN ✦ CONNECT ✦ CREATE ✦ PLAY ✦ CELEBRATE ✦ CONTINUE ✦ SKILLS ✦ COMMUNITY ✦ CULTURE ✦ OPPORTUNITY ✦&nbsp;</span>
-    <span>&nbsp;LEARN ✦ CONNECT ✦ CREATE ✦ PLAY ✦ CELEBRATE ✦ CONTINUE ✦ SKILLS ✦ COMMUNITY ✦ CULTURE ✦ OPPORTUNITY ✦&nbsp;</span>
-  </div>
-</div>
 
 <!-- WHO -->
 <section id="who" class="sec">
@@ -1048,12 +1049,6 @@ body.page-home .home-summary{display:block}
   </div>
 </section>
 
-<div class="ticker rev" aria-hidden="true">
-  <div class="ticker-track">
-    <span>&nbsp;PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU ✦ DHAQAN GOOB ✦ PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU  DHAQAN GOOB &nbsp;</span>
-    <span>&nbsp;PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU ✦ DHAQAN GOOB ✦ PARTNER WITH US ✦ MAHADSANID ✦ THANK YOU ✦ DHAQAN GOOB ✦&nbsp;</span>
-  </div>
-</div>
 
 <!-- CONTACT -->
 <section id="contact" class="sec">
