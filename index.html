@@ -583,6 +583,13 @@ body.page-home .home-event5{display:grid}
 .home-event5-media{min-height:260px}.home-event5-media img{width:100%;height:100%;object-fit:cover;display:block}
 .home-event5-copy{padding:clamp(24px,3vw,38px);display:flex;flex-direction:column;justify-content:center}.home-event5-copy .eyebrow{display:block;color:var(--crimson);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}.home-event5-copy h3{font-size:clamp(28px,3vw,42px);margin-bottom:10px}.home-event5-copy p{font-size:15px;font-weight:300}.home-event5-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:24px}.home-event5-actions .btn{font-size:11px}.text-link{color:var(--crimson);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 @media(max-width:640px){.home-event5{grid-template-columns:1fr}.home-event5-media{min-height:210px;height:210px}}
+.hero-event6{display:grid;grid-template-columns:130px 1fr;gap:16px;align-items:center;margin:26px 0 18px;padding:12px;border:1.5px solid var(--ink);background:var(--card);box-shadow:7px 7px 0 var(--amber)}
+.hero-event6-media{height:130px;overflow:hidden}.hero-event6-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-event6-copy .eyebrow{display:block;color:var(--crimson);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}.hero-event6-copy h3{font-size:clamp(21px,2.5vw,30px);margin-bottom:5px}.hero-event6-copy p{font-size:13px;font-weight:300}.hero-event6 .home-event5-actions{margin-top:12px;gap:14px}.hero-event6 .home-event5-actions .btn{font-size:10px;padding:9px 12px}.hero-event6 .text-link{font-size:10px}
+.coming-soon{display:inline-flex;align-items:center;gap:8px;margin-bottom:9px;padding:6px 10px;border:1px solid var(--crimson);background:var(--crimson);color:#fff3e2;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;position:relative;overflow:hidden;box-shadow:4px 4px 0 var(--amber)}
+.coming-soon::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.34) 48%,transparent 72%);transform:translateX(-120%);animation:comingShimmer 3.2s ease-in-out infinite}.coming-soon i{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(245,184,65,.8);animation:comingPulse 1.8s ease-out infinite;position:relative;z-index:1}.coming-soon{z-index:0}.coming-soon>*{position:relative;z-index:1}@keyframes comingShimmer{0%,35%{transform:translateX(-120%)}65%,100%{transform:translateX(120%)}}@keyframes comingPulse{0%{box-shadow:0 0 0 0 rgba(245,184,65,.8)}70%{box-shadow:0 0 0 8px rgba(245,184,65,0)}100%{box-shadow:0 0 0 0 rgba(245,184,65,0)}}
+@media(prefers-reduced-motion:reduce){.coming-soon::after,.coming-soon i{animation:none!important}.coming-soon i{box-shadow:none}}
+@media(max-width:640px){.hero-event6{grid-template-columns:96px 1fr;gap:12px;margin-top:22px;padding:10px;box-shadow:5px 5px 0 var(--amber)}.hero-event6-media{height:96px}.hero-event6-copy h3{font-size:21px}.hero-event6 .home-event5-actions{margin-top:9px}.hero-event6 .text-link{display:none}}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}.lm>span{transform:none!important}</style></noscript>
 <script type="application/ld+json">
@@ -647,6 +654,10 @@ body.page-home .home-event5{display:grid}
         <span><b>2024</b> Founded</span>
         <span><b>5</b> Historical Events</span>
         <span><b>~787</b> Women Reached</span>
+      </div>
+      <div class="hero-event6 rv" style="--d:.65s">
+        <div class="hero-event6-media"><img src="assets/images/Event-06/announcement.webp" alt="Event 6 announcement: Garoowe, Puntland, 10 December 2026" loading="eager" fetchpriority="high"></div>
+        <div class="hero-event6-copy"><span class="coming-soon" role="status"><i aria-hidden="true"></i>Coming soon</span><span class="eyebrow">Upcoming gathering · Event 6</span><h3>Hoyga Hodan in Garoowe</h3><p>Garoowe, Puntland · 10 December 2026</p><div class="home-event5-actions"><a class="btn btn-crimson" href="events.html">View event details</a><a class="text-link" href="contact.html">Express interest →</a></div></div>
       </div>
       <div class="scroll-cue rv" style="--d:.7s"><i></i>Scroll the story</div>
     </div>
@@ -974,10 +985,6 @@ body.page-home .home-event5{display:grid}
       <p class="lead rv" style="margin-top:16px">The next chapter is a carefully supported programme of 9 planned events across 4 cities over the next 12 months. Donors and partners can help turn community demand into reliable, welcoming gatherings.</p>
     </div>
 
-    <div class="home-event6 home-event5 rv">
-      <div class="home-event5-media"><img src="assets/images/Event-06/announcement.webp" alt="Event 6 announcement: Garoowe, Puntland, 10 December 2026" loading="eager" fetchpriority="high"></div>
-      <div class="home-event5-copy"><span class="eyebrow">Upcoming gathering · Event 6</span><h3>Hoyga Hodan in Garoowe</h3><p>Garoowe, Puntland · 10 December 2026</p><div class="home-event5-actions"><a class="btn btn-crimson" href="events.html">View event details</a><a class="text-link" href="contact.html">Express interest →</a></div></div>
-    </div>
     <div class="home-event5 rv">
       <div class="home-event5-media"><img src="assets/images/Event-05/cover.webp" alt="Women gathering beside the Hoyga Hodan Event 5 stage" loading="lazy"></div>
       <div class="home-event5-copy"><span class="eyebrow">Most recent documented event · 3 September 2026</span><h3>Hoyga Hodan Event 5</h3><p>Mogadishu Tourist Village · 187 women participants</p><div class="home-event5-actions"><a class="btn btn-crimson" href="event-05.html">View Event 5</a><a class="text-link" href="events.html">Browse all events →</a></div></div>
